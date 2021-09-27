@@ -11,18 +11,23 @@ public class PlayerController : MonoBehaviour
     public float lazerSpeed = 30;
     public float lifetime = 3;
 
-
-    public float sideMovement;
+    [SerializeField] private float sideMovement;
     
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            transform.position = new Vector3 (transform.position.x - sideMovement, transform.position.y);
+            if (transform.position.x - sideMovement >= -sideMovement)
+            {
+                transform.position = new Vector3(transform.position.x - sideMovement, transform.position.y);
+            }
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            transform.position = new Vector3(transform.position.x + sideMovement, transform.position.y);
+            if (transform.position.x + sideMovement <= sideMovement)
+            {
+                transform.position = new Vector3(transform.position.x + sideMovement, transform.position.y);
+            }
         }
 
         //When player hits spacebar the ship will shoot calling the Fire() function
@@ -30,8 +35,6 @@ public class PlayerController : MonoBehaviour
         {
             Fire();
         }
-
-        
     }
 
     //Instantiates two lazer projectiles at two different starting locations (both are children of the parent ship). Then starts a IEnumerator to destroy the object after some time.
@@ -50,7 +53,6 @@ public class PlayerController : MonoBehaviour
         lazerTwoRB.velocity = Vector3.back * lazerSpeed;
 
         StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
-
     }
 
     //Destroys object after a set amount of time.
