@@ -8,6 +8,9 @@ TagManager:
   - Laser
   - Shield
   - ShieldPickup
+  - ShieldPowerUp
+  - MeteorNormal
+  - MeteorShield
   layers:
   - Default
   - TransparentFX
