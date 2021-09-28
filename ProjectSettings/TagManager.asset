@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Laser
-  - ShieldPowerUp
   - Shield
+  - ShieldPickup
   layers:
   - Default
   - TransparentFX

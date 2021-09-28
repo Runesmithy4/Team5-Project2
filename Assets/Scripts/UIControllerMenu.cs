@@ -47,6 +47,12 @@ public class UIControllerMenu : MonoBehaviour
         }
     }
 
+    // Returns to the main menu
+    public void OnRetryButtonClick()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     // Sets the active panel to the specified panel
     public void setActivePanel(int panelNumber)
     {
