@@ -17,16 +17,16 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            if (transform.position.x - sideMovement >= -sideMovement)
+            if (transform.position.x + sideMovement <= sideMovement)
             {
-                transform.position = new Vector3(transform.position.x - sideMovement, transform.position.y);
+                transform.position = new Vector3(transform.position.x + sideMovement, transform.position.y);
             }
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            if (transform.position.x + sideMovement <= sideMovement)
+            if (transform.position.x - sideMovement >= -sideMovement)
             {
-                transform.position = new Vector3(transform.position.x + sideMovement, transform.position.y);
+                transform.position = new Vector3(transform.position.x - sideMovement, transform.position.y);
             }
         }
 
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             Fire();
         }
     }
-
+    
     //Instantiates two lazer projectiles at two different starting locations (both are children of the parent ship). Then starts a IEnumerator to destroy the object after some time.
     private void Fire()
     {
