@@ -259,7 +259,7 @@ MonoBehaviour:
   lazerSpawnTwo: {fileID: 1437356581}
   lazerSpeed: 40
   lifetime: 1.25
-  sideMovement: 3
+  sideMovement: 5
 --- !u!1 &693185683
 GameObject:
   m_ObjectHideFlags: 0
