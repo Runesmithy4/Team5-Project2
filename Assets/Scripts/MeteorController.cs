@@ -34,7 +34,10 @@ public class MeteorController : MonoBehaviour
             {
                 Destroy(gameObject);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 
                 pc.score += 5;
                 pc.UpdateScoreText();
@@ -52,7 +55,10 @@ public class MeteorController : MonoBehaviour
                 shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
                 Destroy(gameObject);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 
                 pc.score += 1;
                 pc.UpdateScoreText();
