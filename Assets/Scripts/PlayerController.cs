@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Fire();
+            FindObjectOfType<AudioManager>().Play("Laser");
         }
     }
     
