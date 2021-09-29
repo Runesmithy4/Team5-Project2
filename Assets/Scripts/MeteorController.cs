@@ -33,6 +33,12 @@ public class MeteorController : MonoBehaviour
             if (other.gameObject.CompareTag("Laser"))
             {
                 Destroy(gameObject);
+<<<<<<< HEAD
+=======
+
+                pc.score += 5;
+                pc.UpdateScoreText();
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
             }
         }
         //If the meteor is offers a shield, upon shooting it, it will release a shield power up at is location and disappear as if it was destroyed.
@@ -45,6 +51,12 @@ public class MeteorController : MonoBehaviour
                 Rigidbody shieldPowerUpRB = shieldPowerUpSpawn.GetComponent<Rigidbody>();
                 shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
                 Destroy(gameObject);
+<<<<<<< HEAD
+=======
+
+                pc.score += 1;
+                pc.UpdateScoreText();
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
             }
         }
     }
