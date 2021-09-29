@@ -10,12 +10,16 @@ public class MeteorController : MonoBehaviour
     //Variable inlcuding the script from the spawner allowing to access variables within a separate script.
     private SpawnController spawnController;
 
+    [SerializeField] private PlayerController pc;
+
     // Start is called before the first frame update
     void Start()
     {
         //Finds the SpawnController script letting us access it.
         GameObject spawner = GameObject.Find("MeteorSpawnerMiddle");
         spawnController = spawner.GetComponent<SpawnController>();
+
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,7 @@ public class MeteorController : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -45,6 +50,11 @@ public class MeteorController : MonoBehaviour
                 pc.score += 5;
                 pc.UpdateScoreText();
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+
+                pc.score += 5;
+                pc.UpdateScoreText();
+>>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
             }
         }
         //If the meteor is offers a shield, upon shooting it, it will release a shield power up at is location and disappear as if it was destroyed.
@@ -60,6 +70,7 @@ public class MeteorController : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -69,6 +80,11 @@ public class MeteorController : MonoBehaviour
                 pc.score += 1;
                 pc.UpdateScoreText();
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+
+                pc.score += 1;
+                pc.UpdateScoreText();
+>>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
             }
         }
     }

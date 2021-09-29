@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,11 +15,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
+    [SerializeField] private Text scoreText;
     [SerializeField] private int lives;
     [SerializeField] private float sideMovement;
 
+    public int score;
+
     void Start()
     {
+        score = 0;
         deathPanel.SetActive(false);
     }
     
@@ -26,19 +31,16 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
         {
-            if (transform.position.x + sideMovement <= sideMovement)
-            {
-                transform.position = new Vector3(transform.position.x + sideMovement, transform.position.y);
-            }
+            transform.position = new Vector3(sideMovement, transform.position.y);
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
-            if (transform.position.x - sideMovement >= -sideMovement)
-            {
-                transform.position = new Vector3(transform.position.x - sideMovement, transform.position.y);
-            }
+            transform.position = new Vector3(-sideMovement, transform.position.y);
         }
-
+        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        {
+            transform.position = new Vector3(0, transform.position.y);
+        }
         //When player hits spacebar the ship will shoot calling the Fire() function
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -79,7 +81,7 @@ public class PlayerController : MonoBehaviour
             shield.SetActive(true);
         }
 
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield"))
         {
             if(shield.activeInHierarchy)
             {
@@ -100,5 +102,10 @@ public class PlayerController : MonoBehaviour
             deathPanel.SetActive(true);
             spaceShip.SetActive(false);
         }
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Current Score: " + score;
     }
 }

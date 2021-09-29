@@ -1,6 +1,7 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity 2021.1.16f1/Editor/Data', plugins path 'C:/Program Files/Unity 2021.1.16f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,3 +50,6 @@ Cmd: shutdown
 =======
 Cmd: shutdown
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+Cmd: shutdown
+>>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
