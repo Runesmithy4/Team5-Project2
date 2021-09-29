@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private Text scoreText;
+    [SerializeField] private GameObject shieldPanel;
+    [SerializeField] private GameObject livesPanel;
+
     public int lives;
     [SerializeField] private float sideMovement;
 
@@ -25,6 +28,8 @@ public class PlayerController : MonoBehaviour
     {
         score = 0;
         deathPanel.SetActive(false);
+        shieldPanel.SetActive(false);
+        livesPanel.GetComponent<Image>().color = Color.green;
     }
     
     void Update()
@@ -81,6 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             shield.SetActive(true);
+            shieldPanel.SetActive(true);
         }
 
         if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield"))
@@ -89,6 +95,7 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 shield.SetActive(false);
+                shieldPanel.SetActive(false);
             }
             else
             {
@@ -101,10 +108,20 @@ public class PlayerController : MonoBehaviour
 
     public void CheckIfDead()
     {
-        if (lives <= 0)
+        switch (lives)
         {
-            deathPanel.SetActive(true);
-            spaceShip.SetActive(false);
+            case 3:
+                break;
+            case 2:
+                livesPanel.GetComponent<Image>().color = Color.yellow;
+                break;
+            case 1:
+                livesPanel.GetComponent<Image>().color = Color.red;
+                break;
+            default:
+                deathPanel.SetActive(true);
+                spaceShip.SetActive(false);
+                break;
         }
     }
 
