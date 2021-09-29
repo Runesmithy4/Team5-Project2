@@ -112,7 +112,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 0.030867502, y: -0.009949833, z: -0.038707286}
 --- !u!114 &2804912546508383568
 MonoBehaviour:
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldPowerUp: {fileID: 7996164051175113356, guid: 144adcea13e232749996e40d6f73ed1c, type: 3}
+  pc: {fileID: 0}

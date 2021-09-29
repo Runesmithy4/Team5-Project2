@@ -19,7 +19,7 @@ public class UIControllerMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("HighScore"))
         {
             highScore = PlayerPrefs.GetInt("HighScore");
-            highScoreText.text = "High Score: " + highScore;
+            highScoreText.text = "High Score: " + highScore.ToString();
         }
     }
 
@@ -32,7 +32,7 @@ public class UIControllerMenu : MonoBehaviour
     }
     private void Update()
     {
-        scoreText.text = "Current Score: " + playerController.score;
+        scoreText.text = "Current Score: " + playerController.score.ToString();
     }
     // Quits the game
     public void OnQuitButtonClick()
@@ -95,7 +95,7 @@ public class UIControllerMenu : MonoBehaviour
         if(playerController.score > highScore)
         {
             highScore = playerController.score;
-            highScoreText.text = "High Score: " + highScore;
+            highScoreText.text = "High Score: " + highScore.ToString();
             PlayerPrefs.SetInt("HighScore", highScore);
         }
     }
