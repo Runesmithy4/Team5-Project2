@@ -17,6 +17,7 @@ Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 56117
 Successfully changed project path to: D:/SGD 212/New folder/Milestone 1/Team5-Project2
 D:/SGD 212/New folder/Milestone 1/Team5-Project2
@@ -25,12 +26,17 @@ Refreshing native plugins compatible for Editor in 244.03 ms, found 3 plugins.
 =======
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 65391
 Successfully changed project path to: C:/Users/bwols/Documents/GitHub/Team5-Project2
 C:/Users/bwols/Documents/GitHub/Team5-Project2
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 73.64 ms, found 3 plugins.
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -88,6 +94,7 @@ Domain Reload Profiling:
 			CreateAndSetChildDomain (1ms)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		EndReloadAssembly (453ms)
 			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -104,11 +111,19 @@ Domain Reload Profiling:
 			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+		EndReloadAssembly (454ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 			SetupTypeCache (168ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (28ms)
 			SetupLoadedEditorAssemblies (213ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -119,9 +134,12 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (1ms)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				ProcessInitializeOnLoadAttributes (115ms)
 				ProcessInitializeOnLoadMethodAttributes (31ms)
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 				ProcessInitializeOnLoadAttributes (96ms)
@@ -135,7 +153,11 @@ Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Registered in 0.003535 seconds.
+=======
+Registered in 0.005420 seconds.
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 Registered in 0.005420 seconds.
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -146,6 +168,7 @@ Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\SGD 212\New folder\Milestone 1\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\SGD 212\New folder\Milestone 1\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
@@ -186,6 +209,16 @@ Domain Reload Profiling:
 		BeginReloadAssembly (150ms)
 			ExecutionOrderSort (0ms)
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.129 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1130ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
@@ -198,6 +231,9 @@ Domain Reload Profiling:
 			RebuildScriptCaches (43ms)
 			SetupLoadedEditorAssemblies (375ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -207,10 +243,17 @@ Domain Reload Profiling:
 				RefreshPlugins (1ms)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (85ms)
 				ProcessInitializeOnLoadAttributes (305ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (5ms)
+=======
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (7ms)
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 				BeforeProcessingInitializeOnLoad (65ms)
 				ProcessInitializeOnLoadAttributes (292ms)
@@ -231,8 +274,13 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
 Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
 Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
@@ -253,6 +301,9 @@ Total: 2.734800 ms (FindLiveObjects: 0.195900 ms CreateObjectMapping: 0.137200 m
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3421.
 Total: 2.681400 ms (FindLiveObjects: 0.211300 ms CreateObjectMapping: 0.151200 ms MarkObjects: 2.257500 ms  DeleteObjects: 0.060800 ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -269,6 +320,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   path: Assets/Scenes/Team5-FirstScene.unity
@@ -875,9 +927,63 @@ Received Import Request.
   path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon.prefab
   artifactKey: Guid(1f78031b7183f2a4498c4cfc761ca60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon.prefab using Guid(1f78031b7183f2a4498c4cfc761ca60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3cb1f1ad0e824d217757c0ff36ea1ad') in 0.027168 seconds 
+=======
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_1_Mirrored.prefab
+  artifactKey: Guid(c6b3f5b24fac195409550702e5daa40f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_1_Mirrored.prefab using Guid(c6b3f5b24fac195409550702e5daa40f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cad90b6755df396b367350949c801c0e') in 0.379408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_3.prefab
+  artifactKey: Guid(53643d8f33e9df94ba733d00e1c6d10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_3.prefab using Guid(53643d8f33e9df94ba733d00e1c6d10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a01ba1fc59b48128246e426246175bd') in 0.029455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Plasma.prefab
+  artifactKey: Guid(157f084336ed05c45947433542a2eba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Plasma.prefab using Guid(157f084336ed05c45947433542a2eba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708b6b1d210ab8139d1c3886cdbc2aad') in 0.023845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Core.prefab
+  artifactKey: Guid(328366602c7f9ae4aa29ecb957c7731d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Core.prefab using Guid(328366602c7f9ae4aa29ecb957c7731d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44fd72451949084b5692c234b597727') in 0.024707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon.prefab
+  artifactKey: Guid(1f78031b7183f2a4498c4cfc761ca60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon.prefab using Guid(1f78031b7183f2a4498c4cfc761ca60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3cb1f1ad0e824d217757c0ff36ea1ad') in 0.027168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_2.prefab
+  artifactKey: Guid(dde490f5ea9b7d94d9594ec8d6435f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_2.prefab using Guid(dde490f5ea9b7d94d9594ec8d6435f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e84b415e3c39cbe256d61b2cc6e324') in 0.025208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules
+  artifactKey: Guid(c262adfd858cafd47a0913f3f3c7d12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules using Guid(c262adfd858cafd47a0913f3f3c7d12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd130172336b7382e840f7746acfa1a4d') in 0.003567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon_Mirrored.prefab
+  artifactKey: Guid(f5a635a64e8270a40aa07137c6d1f162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Weapon_Mirrored.prefab using Guid(f5a635a64e8270a40aa07137c6d1f162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e831c3880fb1fb4f65897c9ce92849d5') in 0.027043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_1.prefab
+  artifactKey: Guid(b30ca3097cfd8de47aa1ba38578e0c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_1.prefab using Guid(b30ca3097cfd8de47aa1ba38578e0c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0519af1e6e8c4a25f342bc5a561d6951') in 0.019128 seconds 
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 ========================================================================
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 0.000218 seconds.
   path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_2.prefab
   artifactKey: Guid(dde490f5ea9b7d94d9594ec8d6435f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -914,10 +1020,25 @@ Received Import Request.
 Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Engine.prefab using Guid(01b4c9caff0ad4d48ac8cb23e89e5224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f75bb60b92beff29e7f3a20fa5f13c') in 0.025245 seconds 
 ========================================================================
 Received Import Request.
+=======
+  Time since last request: 0.000454 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_2_Mirrored.prefab
+  artifactKey: Guid(68009645f1254634c872da28df04bab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Wing_2_Mirrored.prefab using Guid(68009645f1254634c872da28df04bab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1575525aa9d6c0d1ff0302d35fdc2f6b') in 0.023645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Engine.prefab
+  artifactKey: Guid(01b4c9caff0ad4d48ac8cb23e89e5224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Engine.prefab using Guid(01b4c9caff0ad4d48ac8cb23e89e5224) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f75bb60b92beff29e7f3a20fa5f13c') in 0.025245 seconds 
+========================================================================
+Received Import Request.
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
   Time since last request: 0.000241 seconds.
   path: Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Thruster.prefab
   artifactKey: Guid(2d009ca22ab0fc141ade283e835e506a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Spaceships/Star Sparrow Spaceship/Prefabs/Modules/StarSparrow_Thruster.prefab using Guid(2d009ca22ab0fc141ade283e835e506a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '110dca1a2d4d5589d4de705506c4a7a1') in 0.023859 seconds 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ========================================================================
 Received Import Request.
@@ -928,6 +1049,8 @@ Start importing Assets/Prefabs/LazerBeam.prefab using Guid(6d09d7228bb25e14197ea
 ========================================================================
 Received Import Request.
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 ========================================================================
 Received Import Request.
   Time since last request: 5.374498 seconds.
@@ -936,6 +1059,9 @@ Received Import Request.
 Start importing Assets/Prefabs/LazerBeam.prefab using Guid(6d09d7228bb25e14197ea1b256c8eca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7909ade5adf682846d49c068223bc594') in 0.014607 seconds 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
   Time since last request: 0.000205 seconds.
   path: Assets/Prefabs/MeteorShield.prefab
@@ -1797,6 +1923,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)

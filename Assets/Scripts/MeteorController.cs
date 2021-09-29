@@ -35,7 +35,10 @@ public class MeteorController : MonoBehaviour
                 Destroy(gameObject);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 
@@ -56,7 +59,10 @@ public class MeteorController : MonoBehaviour
                 Destroy(gameObject);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
 
