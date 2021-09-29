@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIControllerMenu : MonoBehaviour
 {
     [SerializeField] List<GameObject> panels = new List<GameObject>();
 
+    public static UIControllerMenu instance;
+    private PlayerController playerController;
+    public Text scoreText, highScoreText;
+    public int highScore;
+
+    private void Awake()
+    {
+        instance = this;
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highScore = PlayerPrefs.GetInt("HighScore");
+            highScoreText.text = "High Score: " + highScore.ToString();
+        }
+    }
+
     // Makes sure the starting panel appears at the start of the game
     private void Start()
     {
         setActivePanel(0);
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        scoreText.text = "Current Score: 0";
     }
-
+    private void Update()
+    {
+        scoreText.text = "Current Score: " + playerController.score.ToString();
+    }
     // Quits the game
     public void OnQuitButtonClick()
     {
@@ -24,18 +45,22 @@ public class UIControllerMenu : MonoBehaviour
     public void OnRulesButtonClick()
     {
         setActivePanel(1);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnCreditsButtonClick()
     {
         setActivePanel(2);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnBackButtonClick()
     {
         setActivePanel(0);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnLevelsButtonClick()
     {
         setActivePanel(3);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 
     // Loads the next scene
@@ -47,6 +72,13 @@ public class UIControllerMenu : MonoBehaviour
         }
     }
 
+    // Returns to the main menu
+    public void OnRetryButtonClick()
+    {
+        SceneManager.LoadScene(0);
+        ResetScore();
+    }
+
     // Sets the active panel to the specified panel
     public void setActivePanel(int panelNumber)
     {
@@ -56,5 +88,20 @@ public class UIControllerMenu : MonoBehaviour
         }
 
         panels[panelNumber].SetActive(true);
+    }
+
+    public void UpdateHighScore()
+    {
+        if(playerController.score > highScore)
+        {
+            highScore = playerController.score;
+            highScoreText.text = "High Score: " + highScore.ToString();
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
+    }
+
+    public void ResetScore()
+    {
+        playerController.score = 0;
     }
 }

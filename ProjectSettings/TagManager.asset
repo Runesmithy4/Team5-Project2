@@ -6,8 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Laser
-  - ShieldPowerUp
   - Shield
+  - ShieldPickup
+  - ShieldPowerUp
+  - MeteorNormal
+  - MeteorShield
   layers:
   - Default
   - TransparentFX
