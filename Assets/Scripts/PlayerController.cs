@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private Text scoreText;
-    [SerializeField] private int lives;
+    public int lives;
     [SerializeField] private float sideMovement;
 
     public int score;
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CheckIfDead()
+    public void CheckIfDead()
     {
         if (lives <= 0)
         {

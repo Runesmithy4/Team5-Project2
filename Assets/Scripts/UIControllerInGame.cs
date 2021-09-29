@@ -4,29 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIControllerMenu : MonoBehaviour
+public class UIControllerInGame : MonoBehaviour
 {
     [SerializeField] List<GameObject> panels = new List<GameObject>();
 
     public static UIControllerMenu instance;
     private PlayerController playerController;
+    public Text scoreText, highScoreText;
     public int highScore;
-
-    private void Awake()
-    {
-        instance = this;
-        if (PlayerPrefs.HasKey("HighScore"))
-        {
-            highScore = PlayerPrefs.GetInt("HighScore");
-        }
-    }
 
     // Makes sure the starting panel appears at the start of the game
     private void Start()
     {
         setActivePanel(0);
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        scoreText.text = "Current Score: 0";
     }
-
+    private void Update()
+    {
+        scoreText.text = "Current Score: " + playerController.score.ToString();
+    }
     // Quits the game
     public void OnQuitButtonClick()
     {
@@ -59,7 +56,7 @@ public class UIControllerMenu : MonoBehaviour
     // Loads the next scene
     public void OnLevelButtonClick()
     {
-        if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -81,6 +78,16 @@ public class UIControllerMenu : MonoBehaviour
         }
 
         panels[panelNumber].SetActive(true);
+    }
+
+    public void UpdateHighScore()
+    {
+        if (playerController.score > highScore)
+        {
+            highScore = playerController.score;
+            highScoreText.text = "High Score: " + highScore.ToString();
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
     }
 
     public void ResetScore()

@@ -42,6 +42,13 @@ public class MeteorController : MonoBehaviour
                 pc.score += 5;
                 pc.UpdateScoreText();
             }
+            if (other.gameObject.CompareTag("Earth"))
+            {
+                Destroy(gameObject);
+
+                pc.lives -= 1;
+                pc.CheckIfDead();
+            }
         }
         //If the meteor is offers a shield, upon shooting it, it will release a shield power up at is location and disappear as if it was destroyed.
         if (gameObject.CompareTag("MeteorShield"))
@@ -57,6 +64,13 @@ public class MeteorController : MonoBehaviour
 
                 pc.score += 5;
                 pc.UpdateScoreText();
+            }
+            if (other.gameObject.CompareTag("Earth"))
+            {
+                Destroy(gameObject);
+
+                pc.lives -= 1;
+                pc.CheckIfDead();
             }
         }
     }

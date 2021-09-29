@@ -11,6 +11,7 @@ TagManager:
   - ShieldPowerUp
   - MeteorNormal
   - MeteorShield
+  - Earth
   layers:
   - Default
   - TransparentFX
