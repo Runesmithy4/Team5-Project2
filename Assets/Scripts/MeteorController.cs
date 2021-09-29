@@ -37,8 +37,7 @@ public class MeteorController : MonoBehaviour
             if (other.gameObject.CompareTag("Laser"))
             {
                 Destroy(gameObject);
-                FindObjectOfType<AudioManager>().Play("Explosion");
-                
+
                 pc.score += 5;
                 pc.UpdateScoreText();
             }
@@ -53,9 +52,8 @@ public class MeteorController : MonoBehaviour
                 Rigidbody shieldPowerUpRB = shieldPowerUpSpawn.GetComponent<Rigidbody>();
                 shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
                 Destroy(gameObject);
-                FindObjectOfType<AudioManager>().Play("Explosion");
 
-                pc.score += 5;
+                pc.score += 1;
                 pc.UpdateScoreText();
             }
         }
