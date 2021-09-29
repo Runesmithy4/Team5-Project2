@@ -315,6 +315,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panels:
   - {fileID: 1745436837}
+  scoreText: {fileID: 1988637071}
+  highScoreText: {fileID: 206937624}
+  highScore: 0
 --- !u!4 &210092642
 Transform:
   m_ObjectHideFlags: 0
