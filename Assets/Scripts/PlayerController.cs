@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("ShieldPickup"))
         {
+            Destroy(other.gameObject);
             shield.SetActive(true);
         }
 
@@ -86,10 +87,12 @@ public class PlayerController : MonoBehaviour
         {
             if(shield.activeInHierarchy)
             {
+                Destroy(other.gameObject);
                 shield.SetActive(false);
             }
             else
             {
+                Destroy(other.gameObject);
                 lives -= 1;
                 CheckIfDead();
             }
