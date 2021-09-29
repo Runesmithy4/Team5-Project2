@@ -37,36 +37,10 @@ public class MeteorController : MonoBehaviour
             if (other.gameObject.CompareTag("Laser"))
             {
                 Destroy(gameObject);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
-=======
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
-
+                FindObjectOfType<AudioManager>().Play("Explosion");
+                
                 pc.score += 5;
                 pc.UpdateScoreText();
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
-=======
-
-                pc.score += 5;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
-=======
-
-                pc.score += 5;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
-=======
-
-                pc.score += 5;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
             }
         }
         //If the meteor is offers a shield, upon shooting it, it will release a shield power up at is location and disappear as if it was destroyed.
@@ -79,36 +53,10 @@ public class MeteorController : MonoBehaviour
                 Rigidbody shieldPowerUpRB = shieldPowerUpSpawn.GetComponent<Rigidbody>();
                 shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
                 Destroy(gameObject);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
-=======
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+                FindObjectOfType<AudioManager>().Play("Explosion");
 
-                pc.score += 1;
+                pc.score += 5;
                 pc.UpdateScoreText();
->>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
-=======
-
-                pc.score += 1;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
-=======
-
-                pc.score += 1;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
-=======
-
-                pc.score += 1;
-                pc.UpdateScoreText();
->>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
             }
         }
     }

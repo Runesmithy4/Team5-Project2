@@ -24,18 +24,22 @@ public class UIControllerMenu : MonoBehaviour
     public void OnRulesButtonClick()
     {
         setActivePanel(1);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnCreditsButtonClick()
     {
         setActivePanel(2);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnBackButtonClick()
     {
         setActivePanel(0);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
     public void OnLevelsButtonClick()
     {
         setActivePanel(3);
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 
     // Loads the next scene
