@@ -41,6 +41,7 @@ public class MeteorController : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -50,6 +51,11 @@ public class MeteorController : MonoBehaviour
                 pc.score += 5;
                 pc.UpdateScoreText();
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+
+                pc.score += 5;
+                pc.UpdateScoreText();
+>>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
 =======
 
                 pc.score += 5;
@@ -71,6 +77,7 @@ public class MeteorController : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
@@ -80,6 +87,11 @@ public class MeteorController : MonoBehaviour
                 pc.score += 1;
                 pc.UpdateScoreText();
 >>>>>>> parent of 5ac1747 (Menu Text Changed, Music Added)
+=======
+
+                pc.score += 1;
+                pc.UpdateScoreText();
+>>>>>>> parent of c58cbd5 (Revert "Score Works and Player Can Die")
 =======
 
                 pc.score += 1;
