@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject shieldPanel;
     [SerializeField] private GameObject livesPanel;
+    [SerializeField] UIControllerInGame uiGame;
 
     public int lives;
     [SerializeField] private float sideMovement;
@@ -128,5 +129,6 @@ public class PlayerController : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = "Current Score: " + score;
+        uiGame.UpdateHighScore();
     }
 }

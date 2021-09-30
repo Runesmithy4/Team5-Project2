@@ -12,6 +12,7 @@ TagManager:
   - MeteorNormal
   - MeteorShield
   - Earth
+  - UIController
   layers:
   - Default
   - TransparentFX

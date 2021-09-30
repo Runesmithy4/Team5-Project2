@@ -19,7 +19,9 @@ public class UIControllerInGame : MonoBehaviour
         setActivePanel(0);
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         scoreText.text = "Current Score: 0";
+        highScoreText.text = "High Score: " + highScore;
     }
+
     private void Update()
     {
         scoreText.text = "Current Score: " + playerController.score.ToString();
@@ -65,8 +67,9 @@ public class UIControllerInGame : MonoBehaviour
     // Returns to the main menu
     public void OnRetryButtonClick()
     {
-        SceneManager.LoadScene(0);
+        UpdateHighScore();
         ResetScore();
+        SceneManager.LoadScene(0);
     }
 
     // Sets the active panel to the specified panel
