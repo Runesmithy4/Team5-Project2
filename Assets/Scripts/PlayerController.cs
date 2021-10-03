@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float lazerSpeed = 30;
     public float lifetime = 3;
 
+    [SerializeField] private List<GameObject> meteorSpawners;
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
         deathPanel.SetActive(false);
         shieldPanel.SetActive(false);
         livesPanel.GetComponent<Image>().color = Color.green;
+
+        foreach (GameObject spawner in meteorSpawners)
+        {
+            //spawner.SetActive(true);
+        }
     }
     
     void Update()
@@ -58,18 +64,15 @@ public class PlayerController : MonoBehaviour
     //Instantiates two lazer projectiles at two different starting locations (both are children of the parent ship). Then starts a IEnumerator to destroy the object after some time.
     private void Fire()
     {
-        GameObject lazerOne = Instantiate<GameObject>(lazerPrefab);
-        lazerOne.transform.position = lazerSpawnOne.transform.position;
+        GameObject lazerOne = Instantiate(lazerPrefab, new Vector3(lazerSpawnOne.transform.position.x, lazerSpawnOne.transform.position.y), lazerSpawnOne.transform.rotation);
         Rigidbody lazerOneRB = lazerOne.GetComponent<Rigidbody>();
-        lazerOneRB.velocity = Vector3.back * lazerSpeed;
+        lazerOneRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
+
+        GameObject lazerTwo = Instantiate(lazerPrefab, new Vector3(lazerSpawnTwo.transform.position.x, lazerSpawnTwo.transform.position.y), lazerSpawnTwo.transform.rotation);
+        Rigidbody lazerTwoRB = lazerTwo.GetComponent<Rigidbody>();
+        lazerTwoRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
 
         StartCoroutine(DestroyLazerAfterTime(lazerOne, lifetime));
-        
-        GameObject lazerTwo = Instantiate<GameObject>(lazerPrefab);
-        lazerTwo.transform.position = lazerSpawnTwo.transform.position;
-        Rigidbody lazerTwoRB = lazerTwo.GetComponent<Rigidbody>();
-        lazerTwoRB.velocity = Vector3.back * lazerSpeed;
-
         StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
     }
 
@@ -122,6 +125,12 @@ public class PlayerController : MonoBehaviour
             default:
                 deathPanel.SetActive(true);
                 spaceShip.SetActive(false);
+
+                foreach (GameObject spawner in meteorSpawners)
+                {
+                    spawner.SetActive(false);
+                }
+
                 break;
         }
     }

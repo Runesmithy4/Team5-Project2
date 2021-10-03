@@ -4,7 +4,6 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-
 	public static AudioManager instance;
 
 	public Sound[] sounds;
@@ -36,5 +35,4 @@ public class AudioManager : MonoBehaviour
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Play();
 	}
-
 }

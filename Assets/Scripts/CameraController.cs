@@ -19,14 +19,18 @@ public class CameraController : MonoBehaviour
     // Rotates the ship to the left around its pivot point
     public void OnLeftButtonClick()
     {
+        camera.transform.SetParent(ship.transform);
         ship.transform.Rotate(xAngle, yAngle, zAngle, Space.Self);
         ship.transform.position = shipStartingPos;
+        camera.transform.SetParent(null);
     }
 
     // Rotates the ship to the right around its pivot point
     public void OnRightButtonClick()
     {
+        camera.transform.SetParent(ship.transform);
         ship.transform.Rotate(xAngle, -yAngle, zAngle, Space.Self);
         ship.transform.position = shipStartingPos;
+        camera.transform.SetParent(null);
     }
 }
