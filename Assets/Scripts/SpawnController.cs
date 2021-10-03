@@ -39,10 +39,9 @@ public class SpawnController : MonoBehaviour
         {
             if (timer >= timeTilNextSpawn)
             {
-                GameObject meteorSpawned = Instantiate<GameObject>(meteorNormal);
-                meteorSpawned.transform.position = spawnPoint.transform.position;
+                GameObject meteorSpawned = Instantiate(meteorNormal, spawnPoint.transform.position, Quaternion.identity);
                 Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.forward * meteorSpeed;
+                meteorRB.velocity = Vector3.back * meteorSpeed;
 
                 //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
                 timer = 0;
@@ -54,10 +53,9 @@ public class SpawnController : MonoBehaviour
         {
             if (timer >= timeTilNextSpawn)
             {
-                GameObject meteorSpawned = Instantiate<GameObject>(meteorShield);
-                meteorSpawned.transform.position = spawnPoint.transform.position;
+                GameObject meteorSpawned = Instantiate(meteorShield, spawnPoint.transform.position, Quaternion.identity);
                 Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.forward * meteorSpeed;
+                meteorRB.velocity = Vector3.back * meteorSpeed;
 
                 //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
                 timer = 0;

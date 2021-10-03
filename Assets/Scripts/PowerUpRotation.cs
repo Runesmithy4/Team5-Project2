@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class PowerUpRotation : MonoBehaviour
 {
-
 	#region Settings
 	public float rotationSpeed = 99.0f;
 	public bool reverse = false;

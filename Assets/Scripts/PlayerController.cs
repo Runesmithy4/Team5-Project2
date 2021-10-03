@@ -15,15 +15,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<GameObject> meteorSpawners;
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
+    [SerializeField] private GameObject camera;
     [SerializeField] private GameObject deathPanel;
-    [SerializeField] private Text scoreText;
     [SerializeField] private GameObject shieldPanel;
     [SerializeField] private GameObject livesPanel;
+    [SerializeField] private Text scoreText;
     [SerializeField] UIControllerInGame uiGame;
 
-    public int lives;
     [SerializeField] private float sideMovement;
+    [SerializeField] private Vector3 shipStartingPos;
+    [SerializeField] private Vector3 cameraStartingPos;
+    [SerializeField] private float yAngle;
 
+    public int lives;
     public int score;
 
     void Start()
@@ -35,23 +39,40 @@ public class PlayerController : MonoBehaviour
 
         foreach (GameObject spawner in meteorSpawners)
         {
-            //spawner.SetActive(true);
+            spawner.SetActive(true);
         }
+
+        shipStartingPos = new Vector3(spaceShip.transform.position.x, spaceShip.transform.position.y);
+        cameraStartingPos = new Vector3(camera.transform.position.x, camera.transform.position.y);
     }
     
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
-        {
-            transform.position = new Vector3(sideMovement, transform.position.y);
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
             transform.position = new Vector3(-sideMovement, transform.position.y);
         }
-        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            transform.position = new Vector3(sideMovement, transform.position.y);
+        }
+        if(Input.GetKeyUp(KeyCode.DownArrow))
         {
             transform.position = new Vector3(0, transform.position.y);
+        }
+        if(Input.GetKeyUp(KeyCode.A))
+        {
+            camera.transform.SetParent(spaceShip.transform);
+            spaceShip.transform.Rotate(0, yAngle, 0, Space.Self);
+            spaceShip.transform.position = shipStartingPos;
+            camera.transform.SetParent(null);
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            camera.transform.SetParent(spaceShip.transform);
+            spaceShip.transform.Rotate(0, -yAngle, 0, Space.Self);
+            spaceShip.transform.position = shipStartingPos;
+            camera.transform.SetParent(null);
         }
         //When player hits spacebar the ship will shoot calling the Fire() function
         if (Input.GetKeyDown(KeyCode.Space))

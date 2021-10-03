@@ -55,10 +55,9 @@ public class MeteorController : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Laser"))
             {
-                GameObject shieldPowerUpSpawn = Instantiate<GameObject>(shieldPowerUp);
-                shieldPowerUpSpawn.transform.position = gameObject.transform.position;
+                GameObject shieldPowerUpSpawn = Instantiate(shieldPowerUp, gameObject.transform.position, Quaternion.identity);
                 Rigidbody shieldPowerUpRB = shieldPowerUpSpawn.GetComponent<Rigidbody>();
-                shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
+                shieldPowerUpRB.velocity = Vector3.back * spawnController.meteorSpeed;
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
 

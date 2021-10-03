@@ -26,6 +26,7 @@ public class UIControllerInGame : MonoBehaviour
     {
         scoreText.text = "Current Score: " + playerController.score.ToString();
     }
+
     // Quits the game
     public void OnQuitButtonClick()
     {
