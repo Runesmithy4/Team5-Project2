@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, transform.position.y);
         }
-        if(Input.GetKeyUp(KeyCode.A))
+        /*if(Input.GetKeyUp(KeyCode.A))
         {
             camera.transform.SetParent(spaceShip.transform);
             spaceShip.transform.Rotate(0, yAngle, 0, Space.Self);
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             spaceShip.transform.Rotate(0, -yAngle, 0, Space.Self);
             spaceShip.transform.position = shipStartingPos;
             camera.transform.SetParent(null);
-        }
+        }*/
         //When player hits spacebar the ship will shoot calling the Fire() function
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Destroy(other.gameObject);
-                lives -= 1;
+                //lives -= 1;
                 CheckIfDead();
             }
         }

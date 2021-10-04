@@ -46,7 +46,7 @@ public class MeteorController : MonoBehaviour
             {
                 Destroy(gameObject);
 
-                pc.lives -= 1;
+                //pc.lives -= 1;
                 pc.CheckIfDead();
             }
         }
@@ -68,7 +68,7 @@ public class MeteorController : MonoBehaviour
             {
                 Destroy(gameObject);
 
-                pc.lives -= 1;
+                //pc.lives -= 1;
                 pc.CheckIfDead();
             }
         }
