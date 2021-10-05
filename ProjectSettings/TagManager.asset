@@ -14,6 +14,9 @@ TagManager:
   - Earth
   - UIController
   - EnemyLaser
+  - MeteorLife
+  - LifePickup
+  - Spawner
   layers:
   - Default
   - TransparentFX

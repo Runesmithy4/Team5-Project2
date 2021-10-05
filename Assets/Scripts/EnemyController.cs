@@ -16,17 +16,17 @@ public class EnemyController : MonoBehaviour
     public float timer = 0;
     public Transform laserSpawn;
     public float laserSpeed = 15;
+    
     // Start is called before the first frame update
     void Start()
     {
         //Finds the SpawnController script letting us access it.
-        GameObject spawner = GameObject.Find("MeteorSpawnerMiddle");
-        spawnController = spawner.GetComponent<SpawnController>();
-
+        spawnController = GameObject.Find("EnemySpawner").GetComponent<SpawnController>();
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         enemyRB = GetComponent<Rigidbody>();
 
+        GameObject spawner = GameObject.Find("MeteorSpawnerMiddle");
         endPosition = new Vector3(spawner.transform.position.x, spawner.transform.position.y, spawner.transform.position.z - 50);
     }
 
@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
             Rigidbody laserRB = laser.GetComponent<Rigidbody>();
             laserRB.velocity = (laserSpawn.transform.rotation * Vector3.forward) * laserSpeed;
 
-            StartCoroutine(spawnController.DestoryMeteorAfterTime(laser, 5));
+            StartCoroutine(spawnController.DestroyMeteorAfterTime(laser, 5));
 
             timer = 0;
         }

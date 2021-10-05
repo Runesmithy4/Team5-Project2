@@ -6,7 +6,8 @@ public class ProjectileController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Player") && !other.CompareTag("Laser") && !other.CompareTag("Earth"))
+        // Only if the laser hits an enemy, will the laser be destroyed
+        if(!other.CompareTag("Player") && !other.CompareTag("Laser") && !other.CompareTag("Earth") && !other.CompareTag("Shield"))
         {
             //Just destroys the laser and prints to console what it hit for debugging purposes.
             print("hit " + other.name + "!");

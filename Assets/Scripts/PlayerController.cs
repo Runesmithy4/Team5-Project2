@@ -12,20 +12,16 @@ public class PlayerController : MonoBehaviour
     public float lazerSpeed = 30;
     public float lifetime = 3;
 
-    [SerializeField] private List<GameObject> meteorSpawners;
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
-    [SerializeField] private GameObject camera;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject shieldPanel;
     [SerializeField] private GameObject livesPanel;
     [SerializeField] private Text scoreText;
     [SerializeField] UIControllerInGame uiGame;
+    [SerializeField] SpawnController enemySpawner;
 
     [SerializeField] private float sideMovement;
-    [SerializeField] private Vector3 shipStartingPos;
-    [SerializeField] private Vector3 cameraStartingPos;
-    [SerializeField] private float yAngle;
 
     public int lives;
     public int score;
@@ -36,18 +32,11 @@ public class PlayerController : MonoBehaviour
         deathPanel.SetActive(false);
         shieldPanel.SetActive(false);
         livesPanel.GetComponent<Image>().color = Color.green;
-
-        foreach (GameObject spawner in meteorSpawners)
-        {
-            spawner.SetActive(true);
-        }
-
-        shipStartingPos = new Vector3(spaceShip.transform.position.x, spaceShip.transform.position.y);
-        cameraStartingPos = new Vector3(camera.transform.position.x, camera.transform.position.y);
     }
     
     void Update()
     {
+        // Moves the player to one of three lanes
         if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
             transform.position = new Vector3(-sideMovement, transform.position.y);
@@ -60,20 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, transform.position.y);
         }
-        /*if(Input.GetKeyUp(KeyCode.A))
-        {
-            camera.transform.SetParent(spaceShip.transform);
-            spaceShip.transform.Rotate(0, yAngle, 0, Space.Self);
-            spaceShip.transform.position = shipStartingPos;
-            camera.transform.SetParent(null);
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            camera.transform.SetParent(spaceShip.transform);
-            spaceShip.transform.Rotate(0, -yAngle, 0, Space.Self);
-            spaceShip.transform.position = shipStartingPos;
-            camera.transform.SetParent(null);
-        }*/
+
         //When player hits spacebar the ship will shoot calling the Fire() function
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -107,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Gives the player a shield
         if (other.CompareTag("ShieldPickup"))
         {
             Destroy(other.gameObject);
@@ -114,8 +91,24 @@ public class PlayerController : MonoBehaviour
             shieldPanel.SetActive(true);
         }
 
-        if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield"))
+        // Gives the player an extra life
+        if (other.CompareTag("LifePickup"))
         {
+            Destroy(other.gameObject);
+
+            if (lives < 3)
+            {
+                lives += 1;
+
+            }
+            CheckIfDead();
+        }
+
+        // Removes a life, and checks if the player is dead
+        if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield") || other.CompareTag("MeteorLife") || other.CompareTag("EnemyLaser"))
+        {
+            print(other.tag);
+
             if(shield.activeInHierarchy)
             {
                 Destroy(other.gameObject);
@@ -125,12 +118,13 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Destroy(other.gameObject);
-                //lives -= 1;
+                lives -= 1;
                 CheckIfDead();
             }
         }
     }
 
+    // Checks if the player is dead, and if not changes the color of the health bar to display the amount of lives left
     public void CheckIfDead()
     {
         switch (lives)
@@ -145,12 +139,7 @@ public class PlayerController : MonoBehaviour
                 break;
             default:
                 deathPanel.SetActive(true);
-                spaceShip.SetActive(false);
-
-                foreach (GameObject spawner in meteorSpawners)
-                {
-                    spawner.SetActive(false);
-                }
+                enemySpawner.stop = true;
 
                 break;
         }
