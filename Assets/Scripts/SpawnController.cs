@@ -7,12 +7,17 @@ public class SpawnController : MonoBehaviour
     //Variables to help with position/direction/speed of the meteors when spawned.
     public GameObject meteorNormal;
     public GameObject meteorShield;
-    public float meteorSpeed = 20f;
+    public GameObject enemyShip;
     
+    //Meteor Speed variables
+    public float meteorSpeed = 20f;
     public static float speedIncreaseInterval = 20;
     public float speedChange = 2;                       
     public float speedIntervalTimer = 20;
-    
+
+    //Enemy Ship speed
+    public float enemyShipSpeed = 16f;
+    [SerializeField] public bool enemyIsAlive = false;
 
     public Transform spawnPoint;
 
@@ -54,38 +59,53 @@ public class SpawnController : MonoBehaviour
     {
         //Picks a random number between 1 and 10. If 10 then a shield meteor spawns, if any other number, then a normal meteor spawns instead.
         //This gives shield meteors a 10% chance to spawn currently.
-        int random = Random.Range(1, 11);//10; //Random.Range(1, 11); Commented to see if shields work.
-        
-        if (random < 10) //If below 10 then it spawns a normal meteor, If 10 then a shield meteor will spawn with a powerup inside.
+        int random = 10;//Random.Range(1, 13);//10; //Random.Range(1, 11); Commented to see if shields work.
+        if (enemyIsAlive == false)
         {
-            
-            if (timer >= timeTilNextSpawn)
+            if (random < 8) //If below 10 then it spawns a normal meteor, If 10 then a shield meteor will spawn with a powerup inside.
             {
-                GameObject meteorSpawned = Instantiate(meteorNormal, spawnPoint.transform.position, Quaternion.identity);
-                Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.back * meteorSpeed;
 
-                //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
-                timer = 0;
+                if (timer >= timeTilNextSpawn)
+                {
+                    GameObject meteorSpawned = Instantiate(meteorNormal, spawnPoint.transform.position, Quaternion.identity);
+                    Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
+                    meteorRB.velocity = Vector3.back * meteorSpeed;
 
-                StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
-        }
-        else
-        {
-            if (timer >= timeTilNextSpawn)
-            {
-                GameObject meteorSpawned = Instantiate(meteorShield, spawnPoint.transform.position, Quaternion.identity);
-                Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.back * meteorSpeed;
+                    //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
+                    timer = 0;
 
-                //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
-                timer = 0;
-
-                StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
+                    StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
                 }
             }
+            else if (random < 11)
+            {
+                if (timer >= timeTilNextSpawn)
+                {
+                    enemyIsAlive = true;
+
+                    GameObject enemySpawned = Instantiate(enemyShip, spawnPoint.transform.position, Quaternion.identity);
+                    
+
+                    timer = 0;
+                }
+            }
+            else
+            {
+                if (timer >= timeTilNextSpawn)
+                {
+                    GameObject meteorSpawned = Instantiate(meteorShield, spawnPoint.transform.position, Quaternion.identity);
+                    Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
+                    meteorRB.velocity = Vector3.back * meteorSpeed;
+
+                    //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
+                    timer = 0;
+
+                    StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
+                }
+            }
+            }
         }
-    }
+    
 
     //Destroys the meteor after a certain amount of time.
     public IEnumerator DestoryMeteorAfterTime(GameObject meteor, float delay)

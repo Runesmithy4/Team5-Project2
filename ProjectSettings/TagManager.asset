@@ -13,6 +13,7 @@ TagManager:
   - MeteorShield
   - Earth
   - UIController
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX

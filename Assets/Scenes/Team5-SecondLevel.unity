@@ -829,9 +829,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorNormal: {fileID: 7809326621218806278, guid: fa74abfe0b798cd4491e6161f10afb80, type: 3}
   meteorShield: {fileID: 2567951897717575556, guid: bbb870251b4068142b23c5b17d322c10, type: 3}
+  enemyShip: {fileID: 0}
   meteorSpeed: 20
+  speedChange: 2
+  speedIntervalTimer: 20
+  enemyShipSpeed: 20
+  enemyIsAlive: 0
   spawnPoint: {fileID: 736503996}
   timeTilNextSpawn: 5
+  timer: 0
+  spawnController: {fileID: 0}
 --- !u!4 &736503996
 Transform:
   m_ObjectHideFlags: 0
@@ -1636,7 +1643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1520330414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,9 +1658,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorNormal: {fileID: 7809326621218806278, guid: fa74abfe0b798cd4491e6161f10afb80, type: 3}
   meteorShield: {fileID: 2567951897717575556, guid: bbb870251b4068142b23c5b17d322c10, type: 3}
+  enemyShip: {fileID: 6154829640823985261, guid: 73b3a87f83e6742459591e04e23451c6, type: 3}
   meteorSpeed: 20
+  speedChange: 2
+  speedIntervalTimer: 20
+  enemyShipSpeed: 20
+  enemyIsAlive: 0
   spawnPoint: {fileID: 1520330415}
   timeTilNextSpawn: 5
+  timer: 0
+  spawnController: {fileID: 0}
 --- !u!4 &1520330415
 Transform:
   m_ObjectHideFlags: 0
@@ -1853,9 +1867,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorNormal: {fileID: 7809326621218806278, guid: fa74abfe0b798cd4491e6161f10afb80, type: 3}
   meteorShield: {fileID: 2567951897717575556, guid: bbb870251b4068142b23c5b17d322c10, type: 3}
+  enemyShip: {fileID: 0}
   meteorSpeed: 20
+  speedChange: 2
+  speedIntervalTimer: 20
+  enemyShipSpeed: 20
+  enemyIsAlive: 0
   spawnPoint: {fileID: 1767787288}
   timeTilNextSpawn: 5
+  timer: 0
+  spawnController: {fileID: 0}
 --- !u!4 &1767787288
 Transform:
   m_ObjectHideFlags: 0
