@@ -55,13 +55,10 @@ public class EnemyController : MonoBehaviour
             Rigidbody laserRB = laser.GetComponent<Rigidbody>();
             laserRB.velocity = (laserSpawn.transform.rotation * Vector3.up) * laserSpeed;
 
-            //StartCoroutine(spawnController.DestroyMeteorAfterTime(laser, 5f));
-
             timer = 0;
             FindObjectOfType<AudioManager>().Play("EnemyLaser");
         }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -72,7 +69,6 @@ public class EnemyController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Explosion");
         }
     }
-
 
     public IEnumerator EnemyShipPlacement()
     {

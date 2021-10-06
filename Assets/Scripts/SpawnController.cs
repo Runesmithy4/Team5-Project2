@@ -24,8 +24,7 @@ public class SpawnController : MonoBehaviour
     public float enemyShipSpeed = 16f;
     [SerializeField] public bool enemyIsAlive = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(Spawner());
     }

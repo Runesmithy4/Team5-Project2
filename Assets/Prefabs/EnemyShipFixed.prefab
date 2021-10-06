@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 6361998279356009569}
   - component: {fileID: 2781903181295235159}
   - component: {fileID: 3292903401366800315}
+  - component: {fileID: 270773615244257060}
   m_Layer: 0
   m_Name: EnemyShipFixed
   m_TagString: Enemy
@@ -98,6 +99,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &270773615244257060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6154829640823985261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6811379, y: 2.9652786, z: 0.69546115}
+  m_Center: {x: 0, y: 0.35384807, z: 0.24783453}
 --- !u!1001 &6407319465900908971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,7 +179,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4349964618895316397, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
+      propertyPath: laserSpawn
+      value: 
+      objectReference: {fileID: 8278272645476566927}
+    - target: {fileID: 4349964618895316397, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 5350518620435029723, guid: 72cdc952568f12845ac815f10f0aec2f, type: 3}
+    m_RemovedComponents:
+    - {fileID: 4349964618895316397, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
+    - {fileID: 1656478542213163450, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
+    - {fileID: 6425127959450999006, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a3560eb72e93e84c8a903282d2d771b, type: 3}
 --- !u!4 &5599899161972162468 stripped
 Transform:

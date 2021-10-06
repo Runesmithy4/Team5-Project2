@@ -41,13 +41,6 @@ public class MeteorController : MonoBehaviour
                 playerController.score += 5;
                 playerController.UpdateScoreText();
             }
-            if (other.gameObject.CompareTag("Earth"))
-            {
-                Destroy(gameObject);
-
-                playerController.lives -= 1;
-                playerController.CheckIfDead();
-            }
         }
 
         //If the meteor offers a power up, upon shooting it, it will release a powerup at its location and disappear as if it was destroyed.
@@ -73,6 +66,14 @@ public class MeteorController : MonoBehaviour
                 playerController.score += 5;
                 playerController.UpdateScoreText();
             }
+        }
+
+        if (other.CompareTag("Earth"))
+        {
+            Destroy(gameObject);
+
+            playerController.lives -= 1;
+            playerController.CheckIfDead();
         }
     }
 }

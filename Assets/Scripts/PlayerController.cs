@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         deathPanel.SetActive(false);
         shieldPanel.SetActive(false);
         livesPanel.GetComponent<Image>().color = Color.green;
+        Time.timeScale = 1;
     }
     
     void Update()
@@ -140,7 +141,8 @@ public class PlayerController : MonoBehaviour
                 break;
             default:
                 deathPanel.SetActive(true);
-                enemySpawner.stop = true;
+                enemySpawner.StopAllCoroutines();
+                Time.timeScale = 0;
                 FindObjectOfType<AudioManager>().Play("Explosion");
                 break;
         }
