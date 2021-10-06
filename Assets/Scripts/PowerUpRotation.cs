@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class PowerUpRotation : MonoBehaviour
 {
-
 	#region Settings
 	public float rotationSpeed = 99.0f;
 	public bool reverse = false;
@@ -12,7 +11,7 @@ public class PowerUpRotation : MonoBehaviour
 
 	void Update ()
 	{
-		if(this.reverse)
+		if(reverse)
 			//transform.Rotate(Vector3.back * Time.deltaTime * this.rotationSpeed);
 			transform.Rotate(new Vector3(0f,0f,1f) * Time.deltaTime * this.rotationSpeed);
 		else
@@ -22,11 +21,11 @@ public class PowerUpRotation : MonoBehaviour
 
 	public void SetRotationSpeed(float speed)
 	{
-		this.rotationSpeed = speed;
+		rotationSpeed = speed;
 	}
 
 	public void SetReverse(bool reverse)
 	{
-		this.reverse = reverse;
+		reverse = reverse;
 	}
 }

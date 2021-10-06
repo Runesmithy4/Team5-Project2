@@ -1,25 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MeteorController : MonoBehaviour
 {
     //PowerUp Variables
-    public GameObject shieldPowerUp;
+    [SerializeField] List <GameObject> powerUps;
 
-    //Variable inlcuding the script from the spawner allowing to access variables within a separate script.
+    //Variable including the script from the spawner allowing to access variables within a separate script.
     private SpawnController spawnController;
 
-    [SerializeField] private PlayerController pc;
+    [SerializeField] private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         //Finds the SpawnController script letting us access it.
-        GameObject spawner = GameObject.Find("MeteorSpawnerMiddle");
-        spawnController = spawner.GetComponent<SpawnController>();
-
-        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        spawnController = GameObject.FindGameObjectWithTag("Spawner").GetComponent<SpawnController>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -39,38 +38,40 @@ public class MeteorController : MonoBehaviour
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
                 
-                pc.score += 5;
-                pc.UpdateScoreText();
+                playerController.score += 5;
+                playerController.UpdateScoreText();
             }
             if (other.gameObject.CompareTag("Earth"))
             {
                 Destroy(gameObject);
 
-                pc.lives -= 1;
-                pc.CheckIfDead();
+                playerController.lives -= 1;
+                playerController.CheckIfDead();
             }
         }
-        //If the meteor is offers a shield, upon shooting it, it will release a shield power up at is location and disappear as if it was destroyed.
+
+        //If the meteor offers a power up, upon shooting it, it will release a powerup at its location and disappear as if it was destroyed.
         if (gameObject.CompareTag("MeteorShield"))
         {
             if (other.gameObject.CompareTag("Laser"))
             {
-                GameObject shieldPowerUpSpawn = Instantiate<GameObject>(shieldPowerUp);
-                shieldPowerUpSpawn.transform.position = gameObject.transform.position;
+                int randomPowerUp = 0;
+
+                // If its not the first level, allow the pickup to be a life instead
+                if (SceneManager.GetActiveScene().buildIndex != 1)
+                {
+                    randomPowerUp = Random.Range(0, 2);
+                }
+
+                GameObject shieldPowerUpSpawn = Instantiate(powerUps[randomPowerUp], gameObject.transform.position, Quaternion.identity);
                 Rigidbody shieldPowerUpRB = shieldPowerUpSpawn.GetComponent<Rigidbody>();
-                shieldPowerUpRB.velocity = Vector3.forward * spawnController.meteorSpeed;
+                shieldPowerUpRB.velocity = Vector3.back * spawnController.meteorSpeed;
+                
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
 
-                pc.score += 5;
-                pc.UpdateScoreText();
-            }
-            if (other.gameObject.CompareTag("Earth"))
-            {
-                Destroy(gameObject);
-
-                pc.lives -= 1;
-                pc.CheckIfDead();
+                playerController.score += 5;
+                playerController.UpdateScoreText();
             }
         }
     }

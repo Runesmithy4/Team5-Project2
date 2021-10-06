@@ -1,74 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnController : MonoBehaviour
 {
-    //Variables to help with position/direction/speed of the meteors when spawned.
-    public GameObject meteorNormal;
-    public GameObject meteorShield;
-    public float meteorSpeed;
-    public Transform spawnPoint;
+    // Variables to help with spawning the enemies
+    public List<GameObject> enemies;
+    public List<Vector3> spawnPoints;
+    [SerializeField] private int startWait;
+    [SerializeField] private float minWaitTime;
+    [SerializeField] private float maxWaitTime;
+    [SerializeField] private float spawnWaitTime;
+    public bool stop = false;
 
-    //Variables to help with the separation of spawning in terms of time.
-    public int timeTilNextSpawn = 5;
-    float timer = 0;
+    //Meteor Speed variables
+    public float meteorSpeed = 20f;
+    public static float speedIncreaseInterval = 10;
+    public float speedChange = 10;                       
+    public float speedIntervalTimer = 10;
+
+    //Enemy Ship speed
+    public float enemyShipSpeed = 16f;
+    [SerializeField] public bool enemyIsAlive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = 0;
+        StartCoroutine(Spawner());
     }
 
     // Update is called once per frame
     void Update()
     {
-        //timer will add up as normal time until it is told to reset.
-        timer += Time.deltaTime;
+        spawnWaitTime = Random.Range(minWaitTime, maxWaitTime);
 
-        //Calls the Spawn() function to spawn a meteor
-        Spawn();
+        //Increases speed by x every x seconds.
+        speedIntervalTimer -= Time.deltaTime;
+        if (speedIntervalTimer < 0)
+        {
+            meteorSpeed += speedChange;
+            speedIntervalTimer = speedIncreaseInterval;
+        }
+    }
+    
+    // Spawns a random enemy at a random position after a random amount of time
+    public IEnumerator Spawner()
+    {
+        yield return new WaitForSeconds(startWait);
+
+        while(!stop)
+        {
+            int randomEnemy = Random.Range(0, 100);
+            int randomSpawnPoint = Random.Range(0, 3);
+
+            // 15% for shield meteor, 15% for enemy space ship, and 70% for normal meteor
+            if (randomEnemy >= 30)
+            {
+                randomEnemy = 0;
+                CreateMeteor(randomEnemy, randomSpawnPoint);
+            }
+            else if (randomEnemy >= 15)
+            {
+                randomEnemy = 1;
+                CreateMeteor(randomEnemy, randomSpawnPoint);
+            }
+            else
+            {
+                if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
+                    randomEnemy = 0;
+                    CreateMeteor(randomEnemy, randomSpawnPoint);
+                }
+                else if (enemyIsAlive == false)
+                {
+                    randomEnemy = 2;
+                    enemyIsAlive = true;
+                    Instantiate(enemies[randomEnemy], spawnPoints[randomSpawnPoint], Quaternion.identity);
+                }
+            }
+
+            yield return new WaitForSeconds(spawnWaitTime);
+        }
     }
 
-    void Spawn()
+    // Creates a meteor and sends it towards the player
+    public void CreateMeteor(int randomEnemy, int randomSpawnPoint)
     {
-        //Picks a random number between 1 and 10. If 10 then a shield meteor spawns, if any other number, then a normal meteor spawns instead.
-        //This gives shield meteors a 10% chance to spawn currently.
-        int random = Random.Range(1, 11);//10; //Random.Range(1, 11); Commented to see if shields work.
-        if (random < 10) //If below 10 then it spawns a normal meteor, If 10 then a shield meteor will spawn with a powerup inside.
-        {
-            if (timer >= timeTilNextSpawn)
-            {
-                GameObject meteorSpawned = Instantiate<GameObject>(meteorNormal);
-                meteorSpawned.transform.position = spawnPoint.transform.position;
-                Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.forward * meteorSpeed;
+        GameObject meteorSpawned = Instantiate(enemies[randomEnemy], spawnPoints[randomSpawnPoint], Quaternion.identity);
+        Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
+        meteorRB.velocity = Vector3.back * meteorSpeed;
 
-                //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
-                timer = 0;
-
-                StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
-            }
-        }
-        else
-        {
-            if (timer >= timeTilNextSpawn)
-            {
-                GameObject meteorSpawned = Instantiate<GameObject>(meteorShield);
-                meteorSpawned.transform.position = spawnPoint.transform.position;
-                Rigidbody meteorRB = meteorSpawned.GetComponent<Rigidbody>();
-                meteorRB.velocity = Vector3.forward * meteorSpeed;
-
-                //Resets timer to 0 to allow for another meteor to spawn and to stop production for 5 seconds.
-                timer = 0;
-
-                StartCoroutine(DestoryMeteorAfterTime(meteorSpawned, 9));
-            }
-        }
+        StartCoroutine(DestroyMeteorAfterTime(meteorSpawned, 9));
     }
 
     //Destroys the meteor after a certain amount of time.
-    private IEnumerator DestoryMeteorAfterTime(GameObject meteor, float delay)
+    public IEnumerator DestroyMeteorAfterTime(GameObject meteor, float delay)
     {
         yield return new WaitForSeconds(delay);
 
