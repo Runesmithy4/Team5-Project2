@@ -58,6 +58,7 @@ public class EnemyController : MonoBehaviour
             //StartCoroutine(spawnController.DestroyMeteorAfterTime(laser, 5f));
 
             timer = 0;
+            FindObjectOfType<AudioManager>().Play("EnemyLaser");
         }
     }
 
