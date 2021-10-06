@@ -16,9 +16,9 @@ public class SpawnController : MonoBehaviour
 
     //Meteor Speed variables
     public float meteorSpeed = 20f;
-    public static float speedIncreaseInterval = 20;
-    public float speedChange = 2;                       
-    public float speedIntervalTimer = 20;
+    public static float speedIncreaseInterval = 10;
+    public float speedChange = 10;                       
+    public float speedIntervalTimer = 10;
 
     //Enemy Ship speed
     public float enemyShipSpeed = 16f;
@@ -35,12 +35,12 @@ public class SpawnController : MonoBehaviour
     {
         spawnWaitTime = Random.Range(minWaitTime, maxWaitTime);
 
-        //Increases speed by 2 every 20 seconds.
+        //Increases speed by x every x seconds.
         speedIntervalTimer -= Time.deltaTime;
         if (speedIntervalTimer < 0)
         {
             meteorSpeed += speedChange;
-            speedIntervalTimer = 20;
+            speedIntervalTimer = speedIncreaseInterval;
         }
     }
     
@@ -72,7 +72,7 @@ public class SpawnController : MonoBehaviour
                     randomEnemy = 0;
                     CreateMeteor(randomEnemy, randomSpawnPoint);
                 }
-                else
+                else if (enemyIsAlive == false)
                 {
                     randomEnemy = 2;
                     enemyIsAlive = true;

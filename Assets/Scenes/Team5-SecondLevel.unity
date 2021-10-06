@@ -414,6 +414,7 @@ MonoBehaviour:
   lazerSpawnTwo: {fileID: 1683815091}
   lazerSpeed: 150
   lifetime: 3
+  shootTimer: 0
   shield: {fileID: 644243682}
   spaceShip: {fileID: 488898364}
   deathPanel: {fileID: 1323204497}
@@ -760,10 +761,10 @@ MonoBehaviour:
   maxWaitTime: 2
   spawnWaitTime: 0
   stop: 0
-  meteorSpeed: 20
+  meteorSpeed: 30
   speedChange: 2
   speedIntervalTimer: 20
-  enemyShipSpeed: 16
+  enemyShipSpeed: 20
   enemyIsAlive: 0
 --- !u!4 &708326538
 Transform:

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Transform lazerSpawnTwo;
     public float lazerSpeed = 30;
     public float lifetime = 3;
+    public float shootTimer;
 
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;

@@ -35,13 +35,16 @@ public class EnemyController : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(enemyRB.position != endPosition)
+        if (spawnController.enemyIsAlive == true)
         {
-            Vector3 newPosition = Vector3.MoveTowards(enemyRB.position, endPosition, spawnController.enemyShipSpeed * Time.deltaTime);
-            enemyRB.MovePosition(newPosition);
+            if (enemyRB.position != endPosition)
+            {
+                Vector3 newPosition = Vector3.MoveTowards(enemyRB.position, endPosition, spawnController.enemyShipSpeed * Time.deltaTime);
+                enemyRB.MovePosition(newPosition);
+                StartCoroutine(EnemyShipPlacement());
+            }
+                Shoot();
         }
-
-        Shoot();
     }
 
     private void Shoot()
@@ -50,9 +53,9 @@ public class EnemyController : MonoBehaviour
         {
             GameObject laser = Instantiate(laserPrefab, new Vector3(laserSpawn.transform.position.x, laserSpawn.transform.position.y, laserSpawn.transform.position.z), laserSpawn.rotation);
             Rigidbody laserRB = laser.GetComponent<Rigidbody>();
-            laserRB.velocity = (laserSpawn.transform.rotation * Vector3.forward) * laserSpeed;
+            laserRB.velocity = (laserSpawn.transform.rotation * Vector3.up) * laserSpeed;
 
-            StartCoroutine(spawnController.DestroyMeteorAfterTime(laser, 5));
+            //StartCoroutine(spawnController.DestroyMeteorAfterTime(laser, 5f));
 
             timer = 0;
         }
@@ -66,5 +69,13 @@ public class EnemyController : MonoBehaviour
             spawnController.enemyIsAlive = false;
             Destroy(gameObject);
         }
+    }
+
+
+    public IEnumerator EnemyShipPlacement()
+    {
+        yield return new WaitForSeconds(4);
+
+        enemyRB.position = endPosition;
     }
 }
