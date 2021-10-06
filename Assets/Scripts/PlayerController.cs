@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviour
             default:
                 deathPanel.SetActive(true);
                 enemySpawner.stop = true;
-
+                FindObjectOfType<AudioManager>().Play("Explosion");
                 break;
         }
     }
