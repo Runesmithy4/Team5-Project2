@@ -29,12 +29,10 @@ public class SoundManager : MonoBehaviour
     private void Load()//load volume setting between sessions
     {
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-
     }
 
     private void Save()//Save volume settings between sessions
     {
         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-
     }
 }

@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject shieldPanel;
+    [SerializeField] private GameObject pausePanel;
     [SerializeField] private List<GameObject> livesPanels;
     [SerializeField] private Text scoreText;
     [SerializeField] UIControllerInGame uiGame;
@@ -57,6 +58,20 @@ public class PlayerController : MonoBehaviour
         {
             Fire();
             FindObjectOfType<AudioManager>().Play("Laser");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            if (!pausePanel.activeInHierarchy)
+            {
+                pausePanel.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pausePanel.SetActive(false);
+            }
         }
     }
     
