@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject shieldPanel;
-    [SerializeField] private GameObject livesPanel;
+    [SerializeField] private List<GameObject> livesPanels;
     [SerializeField] private Text scoreText;
     [SerializeField] UIControllerInGame uiGame;
     [SerializeField] SpawnController enemySpawner;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         score = 0;
         deathPanel.SetActive(false);
         shieldPanel.SetActive(false);
-        livesPanel.GetComponent<Image>().color = Color.green;
+        CheckIfDead();
         Time.timeScale = 1;
     }
     
@@ -132,12 +132,19 @@ public class PlayerController : MonoBehaviour
         switch (lives)
         {
             case 3:
+                livesPanels[0].SetActive(true);
+                livesPanels[1].SetActive(false);
+                livesPanels[2].SetActive(false);
                 break;
             case 2:
-                livesPanel.GetComponent<Image>().color = Color.yellow;
+                livesPanels[1].SetActive(true);
+                livesPanels[0].SetActive(false);
+                livesPanels[2].SetActive(false);
                 break;
             case 1:
-                livesPanel.GetComponent<Image>().color = Color.red;
+                livesPanels[2].SetActive(true);
+                livesPanels[0].SetActive(false);
+                livesPanels[1].SetActive(false);
                 break;
             default:
                 deathPanel.SetActive(true);
