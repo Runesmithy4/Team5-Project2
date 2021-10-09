@@ -68,9 +68,18 @@ public class UIControllerMenu : MonoBehaviour
     // Loads the next scene
     public void OnSecondLevelButtonClick()
     {
-        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        if (SceneManager.GetActiveScene().buildIndex + 2 < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
+    }
+
+    // Loads the next scene
+    public void OnThirdLevelButtonClick()
+    {
+        if (SceneManager.GetActiveScene().buildIndex + 3 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         }
     }
 
