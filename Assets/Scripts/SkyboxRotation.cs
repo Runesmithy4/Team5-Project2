@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SkyboxRotation : MonoBehaviour
 {
-
     public static class AxisInput
     {
         public const string Horizontal = "Horizontal";

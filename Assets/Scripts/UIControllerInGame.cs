@@ -16,6 +16,10 @@ public class UIControllerInGame : MonoBehaviour
     // Makes sure the starting panel appears at the start of the game
     private void Start()
     {
+        print(PlayerPrefs.GetInt("Highscore1").ToString());
+        print(PlayerPrefs.GetInt("Highscore2").ToString());
+        print(PlayerPrefs.GetInt("Highscore3").ToString());
+
         setActivePanel(0);
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         scoreText.text = "Current Score: 0";
@@ -30,8 +34,7 @@ public class UIControllerInGame : MonoBehaviour
     // Quits the game
     public void OnQuitButtonClick()
     {
-        print("Quitting the game");
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
     // Returns to the main menu
@@ -39,7 +42,7 @@ public class UIControllerInGame : MonoBehaviour
     {
         UpdateHighScore();
         ResetScore();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Sets the active panel to the specified panel
@@ -100,7 +103,7 @@ public class UIControllerInGame : MonoBehaviour
         }
     }
 
-    private void ResetHighscore()
+    public void ResetHighscore()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {

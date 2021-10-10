@@ -23,9 +23,4 @@ public class PowerUpRotation : MonoBehaviour
 	{
 		rotationSpeed = speed;
 	}
-
-	public void SetReverse(bool reverse)
-	{
-		reverse = reverse;
-	}
 }

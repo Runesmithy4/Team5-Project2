@@ -58,18 +58,16 @@ public class PlayerController : MonoBehaviour
 
         //When player hits spacebar the ship will shoot calling the Fire() function
        
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire && !deathPanel.activeInHierarchy)
         {
             nextFire = Time.time + shootCDTime;
             Fire();
             FindObjectOfType<AudioManager>().Play("Laser");
-        }
-        
-        
+        }       
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            if (!pausePanel.activeInHierarchy)
+            if (!pausePanel.activeInHierarchy && !deathPanel.activeInHierarchy)
             {
                 pausePanel.SetActive(true);
                 Time.timeScale = 0;
@@ -126,7 +124,6 @@ public class PlayerController : MonoBehaviour
             if (lives < 3)
             {
                 lives += 1;
-
             }
             CheckIfDead();
         }
@@ -146,6 +143,7 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 lives -= 1;
+                FindObjectOfType<AudioManager>().Play("Explosion");
                 CheckIfDead();
             }
         }
