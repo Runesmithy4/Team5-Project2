@@ -2530,7 +2530,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Your ship is hurtling towards asteroids!\n\nMove between the different
-    lanes with the A, S, and D keys \nto shoot the asteroids down\n\nHow many asteroids
+    lanes with the arrow keys\nto shoot the asteroids down\n\nHow many asteroids
     can you defeat \nbefore your ship is destroyed?"
 --- !u!222 &1169832762
 CanvasRenderer:

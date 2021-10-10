@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1792593393}
         m_TargetAssemblyTypeName: UIControllerInGame, Assembly-CSharp
         m_MethodName: OnRetryButtonClick
         m_Mode: 1

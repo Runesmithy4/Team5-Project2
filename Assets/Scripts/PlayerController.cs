@@ -173,6 +173,5 @@ public class PlayerController : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = "Current Score: " + score;
-        uiGame.UpdateHighScore();
     }
 }

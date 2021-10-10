@@ -10,16 +10,6 @@ public class UIControllerMenu : MonoBehaviour
 
     public static UIControllerMenu instance;
     private PlayerController playerController;
-    public int highScore;
-
-    private void Awake()
-    {
-        instance = this;
-        if (PlayerPrefs.HasKey("HighScore"))
-        {
-            highScore = PlayerPrefs.GetInt("HighScore");
-        }
-    }
 
     // Makes sure the starting panel appears at the start of the game
     private void Start()
@@ -83,13 +73,6 @@ public class UIControllerMenu : MonoBehaviour
         }
     }
 
-    // Returns to the main menu
-    public void OnRetryButtonClick()
-    {
-        SceneManager.LoadScene(0);
-        ResetScore();
-    }
-
     // Sets the active panel to the specified panel
     public void setActivePanel(int panelNumber)
     {
@@ -99,10 +82,5 @@ public class UIControllerMenu : MonoBehaviour
         }
 
         panels[panelNumber].SetActive(true);
-    }
-
-    public void ResetScore()
-    {
-        playerController.score = 0;
     }
 }

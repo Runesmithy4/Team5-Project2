@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Team5-SecondLevel.unity
     guid: e77cb9505187d334eac4d8e2efab0916
+  - enabled: 1
+    path: Assets/Scenes/Team5-ThirdLevel.unity
+    guid: 6b2ede3085ec22f4286203aa3c5406f0
   m_configObjects: {}

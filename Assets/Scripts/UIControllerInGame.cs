@@ -19,12 +19,12 @@ public class UIControllerInGame : MonoBehaviour
         setActivePanel(0);
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         scoreText.text = "Current Score: 0";
-        highScoreText.text = "High Score: " + highScore;
+        highScoreText.text = "Highscore: " + GetHighscore();
     }
 
     private void Update()
     {
-        scoreText.text = "Current Score: " + playerController.score.ToString();
+        scoreText.text = "Current Score: " + playerController.score;
     }
 
     // Quits the game
@@ -32,37 +32,6 @@ public class UIControllerInGame : MonoBehaviour
     {
         print("Quitting the game");
         Application.Quit();
-    }
-
-    // These functions display the correct panel
-    public void OnRulesButtonClick()
-    {
-        setActivePanel(1);
-        FindObjectOfType<AudioManager>().Play("Click");
-    }
-    public void OnCreditsButtonClick()
-    {
-        setActivePanel(2);
-        FindObjectOfType<AudioManager>().Play("Click");
-    }
-    public void OnBackButtonClick()
-    {
-        setActivePanel(0);
-        FindObjectOfType<AudioManager>().Play("Click");
-    }
-    public void OnLevelsButtonClick()
-    {
-        setActivePanel(3);
-        FindObjectOfType<AudioManager>().Play("Click");
-    }
-
-    // Loads the next scene
-    public void OnLevelButtonClick()
-    {
-        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
     }
 
     // Returns to the main menu
@@ -84,18 +53,68 @@ public class UIControllerInGame : MonoBehaviour
         panels[panelNumber].SetActive(true);
     }
 
-    public void UpdateHighScore()
+    public void ResetScore()
+    {
+        playerController.score = 0;
+    }
+
+    private string GetHighscore()
+    {
+        string highscoreString = "0";
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            highscoreString = PlayerPrefs.GetInt("Highscore1").ToString();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            highscoreString = PlayerPrefs.GetInt("Highscore2").ToString();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            highscoreString = PlayerPrefs.GetInt("Highscore3").ToString();
+        }
+
+        return highscoreString;
+    }
+
+    private void UpdateHighScore()
     {
         if (playerController.score > highScore)
         {
             highScore = playerController.score;
-            highScoreText.text = "High Score: " + highScore.ToString();
-            PlayerPrefs.SetInt("HighScore", highScore);
+            highScoreText.text = "Highscore: " + highScore.ToString();
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                PlayerPrefs.SetInt("Highscore1", highScore);
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                PlayerPrefs.SetInt("Highscore2", highScore);
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                PlayerPrefs.SetInt("Highscore3", highScore);
+            }
         }
     }
 
-    public void ResetScore()
+    private void ResetHighscore()
     {
-        playerController.score = 0;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.DeleteKey("Highscore1");
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            PlayerPrefs.DeleteKey("Highscore2");
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            PlayerPrefs.DeleteKey("Highscore3");
+        }
+        
+        highScoreText.text = "0";
     }
 }
