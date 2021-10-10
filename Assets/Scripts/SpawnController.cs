@@ -53,8 +53,8 @@ public class SpawnController : MonoBehaviour
             int randomEnemy = Random.Range(0, 100);
             int randomSpawnPoint = Random.Range(0, 3);
 
-            // 15% for shield meteor, 15% for enemy space ship, and 70% for normal meteor
-            if (randomEnemy >= 30)
+            // 15% for shield meteor, 15% for enemy space ship, and 70% for normal meteor EDIT: Made it 5% for shield and 80% for meteor and 15% for enemy spaceship AB 
+            if (randomEnemy >= 20)
             {
                 randomEnemy = 0;
                 CreateMeteor(randomEnemy, randomSpawnPoint);

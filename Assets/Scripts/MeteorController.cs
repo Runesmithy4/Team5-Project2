@@ -38,7 +38,7 @@ public class MeteorController : MonoBehaviour
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
                 
-                playerController.score += 5;
+                playerController.score += 10;
                 playerController.UpdateScoreText();
             }
         }
@@ -63,7 +63,7 @@ public class MeteorController : MonoBehaviour
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
 
-                playerController.score += 5;
+                playerController.score += 10;
                 playerController.UpdateScoreText();
             }
         }
