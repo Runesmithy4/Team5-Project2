@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     public Transform lazerSpawnTwo;
     public float lazerSpeed = 30;
     public float lifetime = 3;
-    public float shootTimer;
+    public float shootCDTime;
+    private float nextFire;
+
+    
 
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
@@ -54,11 +57,15 @@ public class PlayerController : MonoBehaviour
         }
 
         //When player hits spacebar the ship will shoot calling the Fire() function
-        if (Input.GetKeyDown(KeyCode.Space))
+       
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
         {
+            nextFire = Time.time + shootCDTime;
             Fire();
             FindObjectOfType<AudioManager>().Play("Laser");
         }
+        
+        
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
@@ -78,16 +85,19 @@ public class PlayerController : MonoBehaviour
     //Instantiates two lazer projectiles at two different starting locations (both are children of the parent ship). Then starts a IEnumerator to destroy the object after some time.
     private void Fire()
     {
-        GameObject lazerOne = Instantiate(lazerPrefab, new Vector3(lazerSpawnOne.transform.position.x, lazerSpawnOne.transform.position.y), lazerSpawnOne.transform.rotation);
-        Rigidbody lazerOneRB = lazerOne.GetComponent<Rigidbody>();
-        lazerOneRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
+       
+            GameObject lazerOne = Instantiate(lazerPrefab, new Vector3(lazerSpawnOne.transform.position.x, lazerSpawnOne.transform.position.y), lazerSpawnOne.transform.rotation);
+            Rigidbody lazerOneRB = lazerOne.GetComponent<Rigidbody>();
+            lazerOneRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
 
-        GameObject lazerTwo = Instantiate(lazerPrefab, new Vector3(lazerSpawnTwo.transform.position.x, lazerSpawnTwo.transform.position.y), lazerSpawnTwo.transform.rotation);
-        Rigidbody lazerTwoRB = lazerTwo.GetComponent<Rigidbody>();
-        lazerTwoRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
+            /*GameObject lazerTwo = Instantiate(lazerPrefab, new Vector3(lazerSpawnTwo.transform.position.x, lazerSpawnTwo.transform.position.y), lazerSpawnTwo.transform.rotation);
+            Rigidbody lazerTwoRB = lazerTwo.GetComponent<Rigidbody>();
+            lazerTwoRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
+            */
 
-        StartCoroutine(DestroyLazerAfterTime(lazerOne, lifetime));
-        StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
+            StartCoroutine(DestroyLazerAfterTime(lazerOne, lifetime));
+            //StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
+
     }
 
     //Destroys object after a set amount of time.
