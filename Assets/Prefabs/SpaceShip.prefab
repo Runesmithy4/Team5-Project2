@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &899431290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899431291}
+  m_Layer: 0
+  m_Name: SpreadSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899431291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899431290}
+  m_LocalRotation: {x: 0.6903456, y: -0.15304591, z: 0.15304591, w: 0.6903456}
+  m_LocalPosition: {x: 0.257, y: 0.037, z: 0.0493}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 116902386192819161}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 25}
 --- !u!1 &116902385136857491
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,10 +315,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lazerPrefab: {fileID: 5350518620435029723, guid: 6d09d7228bb25e14197ea1b256c8eca9, type: 3}
   lazerSpawnOne: {fileID: 116902385254792974}
-  lazerSpawnTwo: {fileID: 116902386681188133}
+  spreadSpawnOne: {fileID: 116902386681188133}
+  spreadSpawnTwo: {fileID: 899431291}
   lazerSpeed: 150
   lifetime: 3
-  shootCDTime: 0
+  shootCDTime: 0.5
   shield: {fileID: 116902386393547345}
   spaceShip: {fileID: 116902386639117053}
   deathPanel: {fileID: 0}
@@ -304,6 +335,7 @@ MonoBehaviour:
   sideMovement: 10
   lives: 3
   score: 0
+  spreadShot: 1
 --- !u!54 &116902386639115521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -344,12 +376,12 @@ GameObject:
   m_Component:
   - component: {fileID: 116902386681188133}
   m_Layer: 0
-  m_Name: LazerSpawnTwo
+  m_Name: SpreadSpawnOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &116902386681188133
 Transform:
   m_ObjectHideFlags: 0
@@ -357,13 +389,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116902386681188132}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.256, y: 0.04, z: 0}
+  m_LocalRotation: {x: 0.6903456, y: 0.15304585, z: -0.15304585, w: 0.6903456}
+  m_LocalPosition: {x: 0.203, y: 0.0372, z: 0.0505}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 116902386192819161}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -25}
 --- !u!1001 &116902386192955737
 PrefabInstance:
   m_ObjectHideFlags: 0

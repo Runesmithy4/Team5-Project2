@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     //Public variables used for instantiated lazers
     public GameObject lazerPrefab;
     public Transform lazerSpawnOne;
-    public Transform lazerSpawnTwo;
+    public Transform spreadSpawnOne;
+    public Transform spreadSpawnTwo;
     public float lazerSpeed = 30;
     public float lifetime = 3;
     public float shootCDTime;
     private float nextFire;
 
-    
 
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     public int lives;
     public int score;
+    public bool spreadShot;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         shieldPanel.SetActive(false);
         CheckIfDead();
         Time.timeScale = 1;
+        //spreadShot = false;
     }
     
     void Update()
@@ -79,11 +81,31 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
     //Instantiates two lazer projectiles at two different starting locations (both are children of the parent ship). Then starts a IEnumerator to destroy the object after some time.
     private void Fire()
     {
-       
+        if (spreadShot == true)
+        {
+            GameObject lazerSpreadOne = Instantiate(lazerPrefab, new Vector3(lazerSpawnOne.transform.position.x, lazerSpawnOne.transform.position.y), lazerSpawnOne.transform.rotation);
+            Rigidbody lazerSpreadOneRB = lazerSpreadOne.GetComponent<Rigidbody>();
+            lazerSpreadOneRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
+
+            GameObject lazerTwo = Instantiate(lazerPrefab, new Vector3(spreadSpawnOne.transform.position.x, spreadSpawnOne.transform.position.y), spreadSpawnOne.transform.rotation);
+            Rigidbody lazerTwoRB = lazerTwo.GetComponent<Rigidbody>();
+            lazerTwoRB.velocity = (spreadSpawnOne.transform.rotation * Vector3.down) * lazerSpeed;
+
+            GameObject lazerThree = Instantiate(lazerPrefab, new Vector3(spreadSpawnTwo.transform.position.x, spreadSpawnTwo.transform.position.y), spreadSpawnTwo.transform.rotation);
+            Rigidbody lazerThreeRB = lazerThree.GetComponent<Rigidbody>();
+            lazerThreeRB.velocity = (spreadSpawnTwo.transform.rotation * Vector3.down) * lazerSpeed;
+
+            StartCoroutine(DestroyLazerAfterTime(lazerSpreadOne, lifetime));
+            StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
+            StartCoroutine(DestroyLazerAfterTime(lazerThree, lifetime));
+        }
+        else
+        {
+
             GameObject lazerOne = Instantiate(lazerPrefab, new Vector3(lazerSpawnOne.transform.position.x, lazerSpawnOne.transform.position.y), lazerSpawnOne.transform.rotation);
             Rigidbody lazerOneRB = lazerOne.GetComponent<Rigidbody>();
             lazerOneRB.velocity = (spaceShip.transform.rotation * Vector3.back) * lazerSpeed;
@@ -95,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
             StartCoroutine(DestroyLazerAfterTime(lazerOne, lifetime));
             //StartCoroutine(DestroyLazerAfterTime(lazerTwo, lifetime));
-
+        }
     }
 
     //Destroys object after a set amount of time.
@@ -126,6 +148,12 @@ public class PlayerController : MonoBehaviour
                 lives += 1;
             }
             CheckIfDead();
+        }
+
+        if (other.CompareTag("SpreadShot"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(SpreadShotActivate(5));
         }
 
         // Removes a life, and checks if the player is dead
@@ -181,5 +209,13 @@ public class PlayerController : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = "Current Score: " + score;
+    }
+
+    public IEnumerator SpreadShotActivate(float delay)
+    {
+        spreadShot = true;
+        yield return new WaitForSeconds(delay);
+        spreadShot = false;
+
     }
 }

@@ -2540,10 +2540,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1115577140}
     - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
-      propertyPath: shootCDTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 332782010}
