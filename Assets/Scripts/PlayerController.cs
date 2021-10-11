@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         shieldPanel.SetActive(false);
         CheckIfDead();
         Time.timeScale = 1;
-        //spreadShot = false;
+        spreadShot = false;
     }
     
     void Update()

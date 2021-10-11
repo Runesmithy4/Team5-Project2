@@ -17,6 +17,7 @@ TagManager:
   - MeteorLife
   - LifePickup
   - Spawner
+  - SpreadShot
   layers:
   - Default
   - TransparentFX
