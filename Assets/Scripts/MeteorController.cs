@@ -41,6 +41,10 @@ public class MeteorController : MonoBehaviour
                 playerController.score += 10;
                 playerController.UpdateScoreText();
             }
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser"))
+            {
+                Destroy(gameObject);
+            }
         }
 
         //If the meteor offers a power up, upon shooting it, it will release a powerup at its location and disappear as if it was destroyed.
@@ -65,6 +69,10 @@ public class MeteorController : MonoBehaviour
 
                 playerController.score += 10;
                 playerController.UpdateScoreText();
+            }
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser"))
+            {
+                Destroy(gameObject);
             }
         }
 
