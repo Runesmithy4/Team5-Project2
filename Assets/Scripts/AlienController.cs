@@ -10,16 +10,19 @@ public class AlienController : MonoBehaviour
 
     private Rigidbody alienRB;
     private Vector3 nextPosition;
+    private Vector3 currentPosition;
 
     private float shootTimer = 5;
     private float timer = 0;
     private float laserSpeed = 25f;
     private float alienSpeed = 5f;
+    private float elapsedTime;
 
     // Start is called before the first frame update
     void Start()
     {
         alienRB = GetComponent<Rigidbody>();
+        currentPosition = transform.position;
 
         int random = Random.Range(0, 3);
         nextPosition = new Vector3(alienPositions[random].x, alienPositions[random].y, alienPositions[random].z);

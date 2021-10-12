@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7804145894188370054}
   m_Layer: 0
   m_Name: AlienLaser
-  m_TagString: EnemyLaser
+  m_TagString: AlienLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

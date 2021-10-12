@@ -2457,6 +2457,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 332782010}
     - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
+      propertyPath: floatingText
+      value: 
+      objectReference: {fileID: 678912660141576580, guid: 288cabdd986e860418c22c6d773257c1, type: 3}
+    - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
       propertyPath: livesPanels.Array.data[0]
       value: 
       objectReference: {fileID: 1362640273}
