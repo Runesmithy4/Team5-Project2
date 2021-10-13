@@ -83,7 +83,6 @@ MonoBehaviour:
   timer: 0
   laserSpawn: {fileID: 8278272645476566927}
   laserSpeed: 15
-  floatingText: {fileID: 678912660141576580, guid: 288cabdd986e860418c22c6d773257c1, type: 3}
 --- !u!54 &3292903401366800315
 Rigidbody:
   m_ObjectHideFlags: 0

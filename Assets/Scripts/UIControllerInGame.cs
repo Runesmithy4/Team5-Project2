@@ -31,19 +31,13 @@ public class UIControllerInGame : MonoBehaviour
         scoreText.text = "Current Score: " + playerController.score;
     }
 
-    // Returns to the main menu
-    public void OnMainMenuButtonClick()
+    // Quits the game
+    public void OnQuitButtonClick()
     {
         SceneManager.LoadScene(0);
     }
 
-    // Quits the game
-    public void OnQuitButtonClick()
-    {
-        Application.Quit();
-    }    
-
-    // Reloads the current level
+    // Returns to the main menu
     public void OnRetryButtonClick()
     {
         UpdateHighScore();
@@ -87,30 +81,24 @@ public class UIControllerInGame : MonoBehaviour
         return highscoreString;
     }
 
-    public void UpdateHighScore()
+    private void UpdateHighScore()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (playerController.score > highScore)
         {
-            if (playerController.score > PlayerPrefs.GetInt("Highscore1"))
+            highScore = playerController.score;
+            highScoreText.text = "Highscore: " + highScore.ToString();
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                PlayerPrefs.SetInt("Highscore1", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore1").ToString();
+                PlayerPrefs.SetInt("Highscore1", highScore);
             }
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            if (playerController.score > PlayerPrefs.GetInt("Highscore2"))
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
-                PlayerPrefs.SetInt("Highscore2", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore2").ToString();
+                PlayerPrefs.SetInt("Highscore2", highScore);
             }
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            if (playerController.score > PlayerPrefs.GetInt("Highscore3"))
+            else if (SceneManager.GetActiveScene().buildIndex == 3)
             {
-                PlayerPrefs.SetInt("Highscore3", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
+                PlayerPrefs.SetInt("Highscore3", highScore);
             }
         }
     }

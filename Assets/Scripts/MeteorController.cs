@@ -39,12 +39,7 @@ public class MeteorController : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Explosion");
                 
                 playerController.score += 10;
-                playerController.ShowScore("10", gameObject);
                 playerController.UpdateScoreText();
-            }
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser") || other.gameObject.CompareTag("AlienLaser"))
-            {
-                Destroy(gameObject);
             }
         }
 
@@ -69,12 +64,7 @@ public class MeteorController : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Explosion");
 
                 playerController.score += 10;
-                playerController.ShowScore("10", gameObject);
                 playerController.UpdateScoreText();
-            }
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser") || other.gameObject.CompareTag("AlienLaser"))
-            {
-                Destroy(gameObject);
             }
         }
 
