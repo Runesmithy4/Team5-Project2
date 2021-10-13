@@ -1,125 +1,125 @@
 Using pre-set license
 Built from '2021.1/release' branch; Version is '2021.1.16f1 (5fa502fca597) revision 6268162'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 18363.1556; Version 1909; 64bit' Language: 'en' Physical Memory: 8108 MB
+OS: 'Windows 10 Home; OS build 19043.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16205 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity 2021.1.16f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.1.16f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/drago/Documents/GitHub/Team5-Project2
+C:/Users/bwols/Documents/GitHub/Team5-Project2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51794
-Successfully changed project path to: C:/Users/drago/Documents/GitHub/Team5-Project2
-C:/Users/drago/Documents/GitHub/Team5-Project2
+52657
+Successfully changed project path to: C:/Users/bwols/Documents/GitHub/Team5-Project2
+C:/Users/bwols/Documents/GitHub/Team5-Project2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 229.14 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 75.96 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.16f1 (5fa502fca597)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.1.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/drago/Documents/GitHub/Team5-Project2/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/bwols/Documents/GitHub/Team5-Project2/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
-    Vendor:   Intel
-    VRAM:     4054 MB
-    Driver:   27.20.100.8682
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.14.7196
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity 2021.1.16f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity 2021.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity 2021.1.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity 2021.1.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006615 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002050 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 244.23 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 75.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.076 seconds
+- Completed reload, in  1.159 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4076ms)
-		BeginReloadAssembly (230ms)
+	ReloadAssembly (1159ms)
+		BeginReloadAssembly (60ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1489ms)
-			LoadAssemblies (223ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (432ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (507ms)
+			SetupTypeCache (156ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (93ms)
-			SetupLoadedEditorAssemblies (753ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (205ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (244ms)
-				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (382ms)
-				ProcessInitializeOnLoadMethodAttributes (102ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (94ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.017829 seconds.
+Registered in 0.005569 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\drago\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\drago\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\bwols\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\bwols\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.066 seconds
+- Completed reload, in  1.110 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4068ms)
-		BeginReloadAssembly (470ms)
+	ReloadAssembly (1110ms)
+		BeginReloadAssembly (146ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (54ms)
-		EndReloadAssembly (3413ms)
-			LoadAssemblies (290ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (906ms)
+			LoadAssemblies (97ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1230ms)
+			SetupTypeCache (324ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (139ms)
-			SetupLoadedEditorAssemblies (1425ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (360ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (186ms)
-				ProcessInitializeOnLoadAttributes (1170ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
-				AfterProcessingInitializeOnLoad (31ms)
-				EditorAssembliesLoaded (1ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (32ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.27 seconds
-Refreshing native plugins compatible for Editor in 1.95 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 107.5 MB.
-System memory in use after: 107.7 MB.
+Unloading 2991 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.5 MB.
+System memory in use after: 113.7 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3416.
-Total: 8.359800 ms (FindLiveObjects: 0.609200 ms CreateObjectMapping: 0.326100 ms MarkObjects: 7.123400 ms  DeleteObjects: 0.298600 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3445.
+Total: 2.800000 ms (FindLiveObjects: 0.204600 ms CreateObjectMapping: 0.141400 ms MarkObjects: 2.402900 ms  DeleteObjects: 0.050500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -128,67 +128,298 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Team5-ThirdLevel.unity
-  artifactKey: Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-ThirdLevel.unity using Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149982e968000957f2c5e204a09d3c3c') in 0.072324 seconds 
+  path: Assets/Materials/GreenLaser.mat
+  artifactKey: Guid(cb3d3c18ec9a38e4f9121cf1ca2a0427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/GreenLaser.mat using Guid(cb3d3c18ec9a38e4f9121cf1ca2a0427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff2f751853600292e1fdafaab3b8b88') in 0.085748 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 115.500236 seconds.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Materials/EnemyLaser.mat
+  artifactKey: Guid(cb80cd446da69cc41a3b0c3099b80122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/EnemyLaser.mat using Guid(cb80cd446da69cc41a3b0c3099b80122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e9ed6246de85521b95a9bfa23c061e') in 0.010407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.679330 seconds.
   path: Assets/Scenes/Team5-SecondLevel.unity
   artifactKey: Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-SecondLevel.unity using Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07d53c70ecbc94541b2d0b75920ecd72') in 0.017088 seconds 
+Start importing Assets/Scenes/Team5-SecondLevel.unity using Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858edd307a6c300e86131d7f3cff42db') in 0.003385 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005327 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\bwols\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\bwols\Documents\GitHub\Team5-Project2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1002ms)
+		BeginReloadAssembly (115ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (828ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (300ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (49ms)
+				ProcessInitializeOnLoadAttributes (259ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2963 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.7 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3487.
+Total: 3.009600 ms (FindLiveObjects: 0.249600 ms CreateObjectMapping: 0.164500 ms MarkObjects: 2.577500 ms  DeleteObjects: 0.016900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.318068 seconds.
-  path: Assets/Scenes/Team5-FirstScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-FirstScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b740c8134fc26f8f6d59d3ccc88ba4') in 0.042421 seconds 
+  Time since last request: 50.277002 seconds.
+  path: Assets/Scenes/Team5-ThirdLevel.unity
+  artifactKey: Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Team5-ThirdLevel.unity using Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbbed5452d999199f39b1dde501bc8ac') in 0.011993 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.034934 seconds.
+  Time since last request: 17.388091 seconds.
   path: Assets/Scenes/Team5-MenuScreen.unity
   artifactKey: Guid(15f7fb7e3ed3f5b4fa3aa65e53a9ed5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-MenuScreen.unity using Guid(15f7fb7e3ed3f5b4fa3aa65e53a9ed5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6691afcaf0fb59cd01e1a4199d39fa66') in 0.023013 seconds 
+Start importing Assets/Scenes/Team5-MenuScreen.unity using Guid(15f7fb7e3ed3f5b4fa3aa65e53a9ed5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebf85c15e5d5c447a23035986376716d') in 0.003450 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.569026 seconds.
-  path: Assets/Scenes/Team5-FirstScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-FirstScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0503459e8b956ac1790b34155dc76da4') in 0.005625 seconds 
+  Time since last request: 100.137047 seconds.
+  path: Assets/TechnoGami/iStock-1159238834-1628x1080.jpg
+  artifactKey: Guid(fbcecd278d9698e4cab5c13c89d4777e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/iStock-1159238834-1628x1080.jpg using Guid(fbcecd278d9698e4cab5c13c89d4777e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5afbee83b250a6abe6ed15d509bfd6c5') in 0.070222 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 717.649015 seconds.
-  path: Assets/Scenes/Team5-SecondLevel.unity
-  artifactKey: Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-SecondLevel.unity using Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e28b7ae37a7429f4797fcb91cae4c28') in 0.008448 seconds 
+  Time since last request: 4.881005 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png
+  artifactKey: Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png using Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d949fbfe765b6f89c732eec0be17210') in 0.018832 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 38.739368 seconds.
-  path: Assets/Scenes/Team5-ThirdLevel.unity
-  artifactKey: Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-ThirdLevel.unity using Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8999903659c57c04211ae13060563602') in 0.007677 seconds 
+  Time since last request: 0.000270 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/OptionButton.png
+  artifactKey: Guid(298f54eda3bf2d945998546d60a1095c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/OptionButton.png using Guid(298f54eda3bf2d945998546d60a1095c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076c9f3c2502b58e9286bfd00fe2d7d1') in 0.019349 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 26.342124 seconds.
-  path: Assets/Scenes/Team5-FirstScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-FirstScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886503fb05d2398c1bfd43c5a1dfbdfe') in 0.006350 seconds 
+  Time since last request: 0.000328 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/SettingButton.png
+  artifactKey: Guid(9afe8b723df40a948b3df48c0736b804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/SettingButton.png using Guid(9afe8b723df40a948b3df48c0736b804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf042e0f534be07581c3cb4a096ce75') in 0.012402 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.225802 seconds.
-  path: Assets/Scenes/Team5-SecondLevel.unity
-  artifactKey: Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-SecondLevel.unity using Guid(e77cb9505187d334eac4d8e2efab0916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70198a0aa839e286058f7ee493f40719') in 0.006092 seconds 
+  Time since last request: 0.000205 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/ExitButton.png
+  artifactKey: Guid(0ce06714099be154f9ddd1700c6a944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/ExitButton.png using Guid(0ce06714099be154f9ddd1700c6a944a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b454b5debd77d0236715c6f9d4f7fb') in 0.011300 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.970634 seconds.
-  path: Assets/Scenes/Team5-ThirdLevel.unity
-  artifactKey: Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Team5-ThirdLevel.unity using Guid(6b2ede3085ec22f4286203aa3c5406f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d2caf0399a688f87940f11ddde2b7b') in 0.007981 seconds 
+  Time since last request: 0.000352 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/StartButton.png
+  artifactKey: Guid(fddf087ead9010447958b0ccad787990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/StartButton.png using Guid(fddf087ead9010447958b0ccad787990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '996f3daa136b606954aa057f657dafdf') in 0.012008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.666677 seconds.
+  path: Assets/TechnoGami/2d UI button/Prefabs/section01.prefab
+  artifactKey: Guid(e4a801aecf923d14ea1fe6e7becfe290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/Prefabs/section01.prefab using Guid(e4a801aecf923d14ea1fe6e7becfe290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99f6deb254c2e36becd2b53245ef0f2a') in 0.026000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/TechnoGami/2d UI button/Prefabs/section02.prefab
+  artifactKey: Guid(fd4bc77d26f58c846b59b24e5cfe1546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/Prefabs/section02.prefab using Guid(fd4bc77d26f58c846b59b24e5cfe1546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bccf3b78993f88888ae246f31e87d71') in 0.005522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/TechnoGami/2d UI button/Prefabs/section04.prefab
+  artifactKey: Guid(8623534eb7c70a84c9f7e72c6fa4fcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/Prefabs/section04.prefab using Guid(8623534eb7c70a84c9f7e72c6fa4fcbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a7fe303f6501592d74c9c131927eaf') in 0.006449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/TechnoGami/2d UI button/Prefabs/section05.prefab
+  artifactKey: Guid(594c9b10d566a8f40ae9c451709724d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/Prefabs/section05.prefab using Guid(594c9b10d566a8f40ae9c451709724d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd559883557a2a73ed4e262ee150efdf4') in 0.006312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/TechnoGami/2d UI button/Prefabs/section03.prefab
+  artifactKey: Guid(a3f62dcd693776b4d809c5846dfe4b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/Prefabs/section03.prefab using Guid(a3f62dcd693776b4d809c5846dfe4b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1802da304cb5cf3ef6ab31e1f73f6f') in 0.006116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.063590 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png
+  artifactKey: Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png using Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc183516ea9a0c9c4e80fd4e479f8304') in 0.013870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.450291 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png
+  artifactKey: Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section01/BlankButton.png using Guid(8d30fc405704e214498ee00bc05c50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acb74815705d8094a5a5f0910465eef4') in 0.014529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.032896 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section02/BlankButton.png
+  artifactKey: Guid(c79649f5ede2efe479a1e54325226dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section02/BlankButton.png using Guid(c79649f5ede2efe479a1e54325226dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5f1aaa29bbe80e9e9844ffbef1713e') in 0.012687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section02/OptionButton.png
+  artifactKey: Guid(f10429c38dca33542a6c7f0719facfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section02/OptionButton.png using Guid(f10429c38dca33542a6c7f0719facfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd99072b4bcd3310443b5de0579e7e1') in 0.017278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section02/StartButton.png
+  artifactKey: Guid(beadb47bca02ceb459a5e77b2ab52f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section02/StartButton.png using Guid(beadb47bca02ceb459a5e77b2ab52f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec1233704dfc0baae95c57f5da153b1') in 0.020106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section02/SettingButton.png
+  artifactKey: Guid(16a9035e313cb3a4e8d75f6efb2c031d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section02/SettingButton.png using Guid(16a9035e313cb3a4e8d75f6efb2c031d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd615c3382547bdd86ad35a58345d60f') in 0.017351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section02/ExitButton.png
+  artifactKey: Guid(c688a1e6e813c8141b8b074ffd6462d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section02/ExitButton.png using Guid(c688a1e6e813c8141b8b074ffd6462d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a9f3878c2bb9d8327fa845fc7fcdcb') in 0.019032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.285675 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section03/BlankButton.png
+  artifactKey: Guid(351b4cbab5939a44aac01a42754e41a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section03/BlankButton.png using Guid(351b4cbab5939a44aac01a42754e41a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b8725862d956542fc0076815e150f4') in 0.011671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section03/ExitButton.png
+  artifactKey: Guid(ea3977169a5ee1c468179b62f1e51fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section03/ExitButton.png using Guid(ea3977169a5ee1c468179b62f1e51fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c395e9d3e40450f1a8ba15f7e67e472') in 0.010243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section03/SettingButton.png
+  artifactKey: Guid(c9ba45f6365a414438658d33d015d356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section03/SettingButton.png using Guid(c9ba45f6365a414438658d33d015d356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a388dd4ae2ef803b8ed4c9ceadd287d') in 0.014025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section03/StartButton.png
+  artifactKey: Guid(dfdc0e6723064cf4e86bdffe50ba1d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section03/StartButton.png using Guid(dfdc0e6723064cf4e86bdffe50ba1d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24aea0593af7028e67fa806d813f2d07') in 0.011659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section03/OptionButton.png
+  artifactKey: Guid(d3e215053b766af42b5b481d1f9f0729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section03/OptionButton.png using Guid(d3e215053b766af42b5b481d1f9f0729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f1859a25e820bc06204fb6e99516af') in 0.011276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.456732 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section04/BlankButton.png
+  artifactKey: Guid(0e3bb115b578abc4e911686acf85c554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section04/BlankButton.png using Guid(0e3bb115b578abc4e911686acf85c554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212fea0ffc1d33718cb7cc18d46531a7') in 0.009231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section04/SettingButton.png
+  artifactKey: Guid(54ddf5d5adb0c3f42ab544ed582dc61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section04/SettingButton.png using Guid(54ddf5d5adb0c3f42ab544ed582dc61d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32db32a1a460105d42ae851be987c4cf') in 0.011227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section04/OptionButton.png
+  artifactKey: Guid(b9896ee07d016a44bbc480d01b5eae93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section04/OptionButton.png using Guid(b9896ee07d016a44bbc480d01b5eae93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb59bf09b8c95b58c4ba816a9198a69a') in 0.010958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section04/StartButton.png
+  artifactKey: Guid(b1052106919680b45af6b06cc87db6c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section04/StartButton.png using Guid(b1052106919680b45af6b06cc87db6c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff9d1737ca64b8c252e9e03a2fbe95f') in 0.011440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section04/ExitButton.png
+  artifactKey: Guid(eaa1d89c02773e34e90b78a04d12b34e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section04/ExitButton.png using Guid(eaa1d89c02773e34e90b78a04d12b34e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5638491f812ed64126c4e1498d3bd024') in 0.010555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.649985 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section05/BlankButton.png
+  artifactKey: Guid(4d350e589a7cb554ca7301a404d9b847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section05/BlankButton.png using Guid(4d350e589a7cb554ca7301a404d9b847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caed46728692301831f66592ef842bd7') in 0.009335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section05/SettingButton.png
+  artifactKey: Guid(5128a329f9c763d46a4d2b82fa32bb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section05/SettingButton.png using Guid(5128a329f9c763d46a4d2b82fa32bb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbc84213201de358a8876aaea7edd5d5') in 0.010667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section05/ExitButton.png
+  artifactKey: Guid(e7df6842c709c9448aa576367271665f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section05/ExitButton.png using Guid(e7df6842c709c9448aa576367271665f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed6c0f781f303aa84ce71cf401b2631') in 0.011843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section05/StartButton.png
+  artifactKey: Guid(b5f240c4fe45e9a4eb63aa490a6ed634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section05/StartButton.png using Guid(b5f240c4fe45e9a4eb63aa490a6ed634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac99df9bc47cae2af9ab402ed082e2f') in 0.011160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/TechnoGami/2d UI button/AllSection/Section05/OptionButton.png
+  artifactKey: Guid(a84032be18a996a4fab44eda7d3f9b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/2d UI button/AllSection/Section05/OptionButton.png using Guid(a84032be18a996a4fab44eda7d3f9b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec62f5d14aa71180ec8a77d73ab1722c') in 0.012105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.741299 seconds.
+  path: Assets/TechnoGami/iStock-1159238834-1628x1080.jpg
+  artifactKey: Guid(fbcecd278d9698e4cab5c13c89d4777e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TechnoGami/iStock-1159238834-1628x1080.jpg using Guid(fbcecd278d9698e4cab5c13c89d4777e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3caa105265b45d1ff08796dceeebb2f0') in 0.017624 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
