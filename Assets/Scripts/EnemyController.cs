@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     public float timer = 0;
     public Transform laserSpawn;
     public float laserSpeed = 15;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +68,12 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("Explosion");
             pc.score += 20;
+            pc.ShowScore("20", gameObject);
+        }
+        if(other.gameObject.CompareTag("AlienLaser"))
+        {
+            spawnController.enemyIsAlive = false;
+            Destroy(gameObject);
         }
     }
 

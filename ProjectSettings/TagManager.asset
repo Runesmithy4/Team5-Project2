@@ -18,6 +18,8 @@ TagManager:
   - LifePickup
   - Spawner
   - SpreadShot
+  - Alien
+  - AlienLaser
   layers:
   - Default
   - TransparentFX

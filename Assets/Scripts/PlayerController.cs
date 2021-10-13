@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] UIControllerInGame uiGame;
     [SerializeField] SpawnController enemySpawner;
+    [SerializeField] private GameObject floatingText;
 
     [SerializeField] private float sideMovement;
 
@@ -157,7 +159,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Removes a life, and checks if the player is dead
-        if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield") || other.CompareTag("MeteorLife") || other.CompareTag("EnemyLaser"))
+        if (other.CompareTag("MeteorNormal") || other.CompareTag("MeteorShield") || other.CompareTag("EnemyLaser") || other.CompareTag("AlienLaser"))
         {
             print(other.tag);
 
@@ -216,6 +218,14 @@ public class PlayerController : MonoBehaviour
         spreadShot = true;
         yield return new WaitForSeconds(delay);
         spreadShot = false;
+    }
 
+    public void ShowScore(string text, GameObject enemy)
+    {
+        if (floatingText)
+        {
+            GameObject ftprefab = Instantiate(floatingText, enemy.transform.position, Quaternion.identity);
+            ftprefab.GetComponentInChildren<TextMeshPro>().text = "+" + text;
+        }
     }
 }

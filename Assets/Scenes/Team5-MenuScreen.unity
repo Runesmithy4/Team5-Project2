@@ -2530,8 +2530,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Your ship is hurtling towards asteroids!\n\nMove between the different
-    lanes with the arrow keys\nto shoot the asteroids down\n\nHow many asteroids
-    can you defeat \nbefore your ship is destroyed?"
+    lanes with the arrow keys\nto shoot the asteroids down.\n\nPressing the P key
+    will pause the game.\n\nHow many asteroids can you defeat \nbefore your ship
+    is destroyed?"
 --- !u!222 &1169832762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4143,7 +4144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1925972613
 MonoBehaviour:
   m_ObjectHideFlags: 0
