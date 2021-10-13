@@ -31,13 +31,19 @@ public class UIControllerInGame : MonoBehaviour
         scoreText.text = "Current Score: " + playerController.score;
     }
 
-    // Quits the game
-    public void OnQuitButtonClick()
+    // Returns to the main menu
+    public void OnMainMenuButtonClick()
     {
         SceneManager.LoadScene(0);
     }
 
-    // Returns to the main menu
+    // Quits the game
+    public void OnQuitButtonClick()
+    {
+        Application.Quit();
+    }    
+
+    // Reloads the current level
     public void OnRetryButtonClick()
     {
         UpdateHighScore();
