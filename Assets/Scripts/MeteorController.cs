@@ -42,7 +42,7 @@ public class MeteorController : MonoBehaviour
                 playerController.ShowScore("10", gameObject);
                 playerController.UpdateScoreText();
             }
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser"))
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser") || other.gameObject.CompareTag("AlienLaser"))
             {
                 Destroy(gameObject);
             }
@@ -72,7 +72,7 @@ public class MeteorController : MonoBehaviour
                 playerController.ShowScore("10", gameObject);
                 playerController.UpdateScoreText();
             }
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser"))
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyLaser") || other.gameObject.CompareTag("AlienLaser"))
             {
                 Destroy(gameObject);
             }
