@@ -73,15 +73,15 @@ public class UIControllerInGame : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            highscoreString = PlayerPrefs.GetInt("Highscore1").ToString();
+            highscoreString = PlayerPrefs.GetInt("Highscore1", 0).ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            highscoreString = PlayerPrefs.GetInt("Highscore2").ToString();
+            highscoreString = PlayerPrefs.GetInt("Highscore2", 0).ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            highscoreString = PlayerPrefs.GetInt("Highscore3").ToString();
+            highscoreString = PlayerPrefs.GetInt("Highscore3", 0).ToString();
         }
 
         return highscoreString;
@@ -113,23 +113,5 @@ public class UIControllerInGame : MonoBehaviour
                 highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
             }
         }
-    }
-
-    public void ResetHighscore()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            PlayerPrefs.DeleteKey("Highscore1");
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            PlayerPrefs.DeleteKey("Highscore2");
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            PlayerPrefs.DeleteKey("Highscore3");
-        }
-        
-        highScoreText.text = "0";
     }
 }

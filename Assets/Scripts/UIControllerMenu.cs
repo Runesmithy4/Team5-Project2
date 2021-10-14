@@ -83,4 +83,12 @@ public class UIControllerMenu : MonoBehaviour
 
         panels[panelNumber].SetActive(true);
     }
+
+    // Removes all the highscores
+    public void ResetHighscores()
+    {
+        PlayerPrefs.DeleteKey("Highscore1");
+        PlayerPrefs.DeleteKey("Highscore2");
+        PlayerPrefs.DeleteKey("Highscore3");
+    }
 }
