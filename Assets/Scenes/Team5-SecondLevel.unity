@@ -2020,6 +2020,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1792593393}
     - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 3960076204163516934, guid: 7ddf5f4c500b6db42bfea1252aecafd4, type: 3}
+    - target: {fileID: 116902386639117055, guid: 372ecaaef0b2bbe4f9843c9910778ebe, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1047816656}

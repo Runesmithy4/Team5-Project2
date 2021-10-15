@@ -66,7 +66,10 @@ public class EnemyController : MonoBehaviour
         {
             spawnController.enemyIsAlive = false;
             Destroy(gameObject);
+
             FindObjectOfType<AudioManager>().Play("Explosion");
+            Instantiate(pc.explosion, gameObject.transform.position, Quaternion.identity);
+            
             pc.score += 20;
             pc.ShowScore("20", gameObject);
         }

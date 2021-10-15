@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(other.gameObject);
                 lives -= 1;
                 FindObjectOfType<AudioManager>().Play("Explosion");
+                Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
                 CheckIfDead();
             }
         }
