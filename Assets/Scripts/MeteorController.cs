@@ -7,6 +7,7 @@ public class MeteorController : MonoBehaviour
 {
     //PowerUp Variables
     [SerializeField] List <GameObject> powerUps;
+    [SerializeField] GameObject explosion;
 
     //Variable including the script from the spawner allowing to access variables within a separate script.
     private SpawnController spawnController;
@@ -37,7 +38,8 @@ public class MeteorController : MonoBehaviour
             {
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
-                
+                Instantiate(playerController.explosion, gameObject.transform.position, Quaternion.identity);
+
                 playerController.score += 10;
                 playerController.ShowScore("10", gameObject);
                 playerController.UpdateScoreText();
@@ -67,6 +69,7 @@ public class MeteorController : MonoBehaviour
                 
                 Destroy(gameObject);
                 FindObjectOfType<AudioManager>().Play("Explosion");
+                Instantiate(playerController.explosion, gameObject.transform.position, Quaternion.identity);
 
                 playerController.score += 10;
                 playerController.ShowScore("10", gameObject);

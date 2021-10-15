@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     //Public variables used for instantiated lazers
     public GameObject lazerPrefab;
+    public GameObject explosion;
     public Transform lazerSpawnOne;
     public Transform spreadSpawnOne;
     public Transform spreadSpawnTwo;
