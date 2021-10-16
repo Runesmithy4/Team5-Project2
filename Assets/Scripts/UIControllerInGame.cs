@@ -46,7 +46,7 @@ public class UIControllerInGame : MonoBehaviour
     // Reloads the current level
     public void OnRetryButtonClick()
     {
-        UpdateHighScore();
+        UpdateHighScore(highScoreText);
         ResetScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -87,31 +87,31 @@ public class UIControllerInGame : MonoBehaviour
         return highscoreString;
     }
 
-    public void UpdateHighScore()
+    public void UpdateHighScore(Text highScoreText)
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (playerController.score > PlayerPrefs.GetInt("Highscore1"))
             {
                 PlayerPrefs.SetInt("Highscore1", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore1").ToString();
             }
+            highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore1").ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             if (playerController.score > PlayerPrefs.GetInt("Highscore2"))
             {
                 PlayerPrefs.SetInt("Highscore2", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore2").ToString();
             }
+            highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore2").ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             if (playerController.score > PlayerPrefs.GetInt("Highscore3"))
             {
                 PlayerPrefs.SetInt("Highscore3", playerController.score);
-                highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
             }
+            highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
         }
     }
 }

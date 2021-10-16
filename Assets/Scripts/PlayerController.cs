@@ -17,18 +17,16 @@ public class PlayerController : MonoBehaviour
     public float shootCDTime;
     private float nextFire;
 
-
     [SerializeField] private GameObject shield;
     [SerializeField] private GameObject spaceShip;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject shieldPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private List<GameObject> livesPanels;
-    [SerializeField] private Text scoreText;
+    [SerializeField] private Text scoreText, finalScoreText, levelHighScoreText;
     [SerializeField] UIControllerInGame uiGame;
     [SerializeField] SpawnController enemySpawner;
     [SerializeField] private GameObject floatingText;
-
     [SerializeField] private float sideMovement;
 
     public int lives;
@@ -203,6 +201,9 @@ public class PlayerController : MonoBehaviour
                 break;
             default:
                 deathPanel.SetActive(true);
+                finalScoreText.text = "Final Score: " + score;
+                uiGame.UpdateHighScore(levelHighScoreText);
+
                 enemySpawner.StopAllCoroutines();
                 Time.timeScale = 0;
                 FindObjectOfType<AudioManager>().Play("Explosion");
