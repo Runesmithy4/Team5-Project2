@@ -60,7 +60,7 @@ public class MeteorController : MonoBehaviour
                 // If its not the first level, allow the pickup to be a life instead
                 if (SceneManager.GetActiveScene().buildIndex != 1)
                 {
-                    randomPowerUp = Random.Range(0, 2);
+                    randomPowerUp = Random.Range(0, 3);
                 }
 
                 GameObject shieldPowerUpSpawn = Instantiate(powerUps[randomPowerUp], gameObject.transform.position, Quaternion.identity);

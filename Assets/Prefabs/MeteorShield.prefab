@@ -129,5 +129,6 @@ MonoBehaviour:
   powerUps:
   - {fileID: 100004, guid: cfadac9990e63804e8c3a57791e7c0d5, type: 3}
   - {fileID: 100008, guid: aaf860cd8993a6c4b984c97449417579, type: 3}
+  - {fileID: 5685509177478153047, guid: 6b6feea195ce92f4580a87680295cc62, type: 3}
+  explosion: {fileID: 0}
   playerController: {fileID: 0}
-  floatingText: {fileID: 678912660141576580, guid: 288cabdd986e860418c22c6d773257c1, type: 3}

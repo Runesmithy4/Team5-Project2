@@ -1154,7 +1154,7 @@ MonoBehaviour:
   spawnWaitTime: 0
   stop: 0
   meteorSpeed: 30
-  speedChange: 2
+  speedChange: 5
   speedIntervalTimer: 20
   enemyShipSpeed: 20
   enemyIsAlive: 0
