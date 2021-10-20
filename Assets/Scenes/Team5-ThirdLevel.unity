@@ -2152,7 +2152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9fac459d67296fe4295daa3100b27dd2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3851,19 +3851,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Laser
     clip: {fileID: 8300000, guid: 593798ce6c7dc4d4cb822c7f8a7e2fc6, type: 3}
-    volume: 0.1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: e406ff58dc028474cb3b9d95d011c8f3, type: 3}
-    volume: 0.2
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EnemyLaser
     clip: {fileID: 8300000, guid: cadf72aac7da1ea4993a0cf01fee92b9, type: 3}
-    volume: 0.1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
