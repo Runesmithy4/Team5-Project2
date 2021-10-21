@@ -15,7 +15,7 @@ public class BgMusic : MonoBehaviour
             return;
         }
 
-        //BgInstance = this;
+        BgInstance = this;
         //DontDestroyOnLoad(this);
     }
 
