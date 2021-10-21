@@ -10,7 +10,7 @@ public class UIControllerInGame : MonoBehaviour
 
     public static UIControllerMenu instance;
     private PlayerController playerController;
-    public Text scoreText, highScoreText;
+    public Text scoreText, highScoreText, deathHighScore, deathScoreText;
     public int highScore;
 
     // Makes sure the starting panel appears at the start of the game
@@ -29,6 +29,7 @@ public class UIControllerInGame : MonoBehaviour
     private void Update()
     {
         scoreText.text = "Current Score: " + playerController.score;
+        deathScoreText.text = "Final Score: " + playerController.score;
     }
 
     // Returns to the main menu
@@ -96,6 +97,7 @@ public class UIControllerInGame : MonoBehaviour
                 PlayerPrefs.SetInt("Highscore1", playerController.score);
             }
             highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore1").ToString();
+            deathHighScore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore1").ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
@@ -104,6 +106,7 @@ public class UIControllerInGame : MonoBehaviour
                 PlayerPrefs.SetInt("Highscore2", playerController.score);
             }
             highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore2").ToString();
+            deathHighScore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore2").ToString();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
@@ -112,6 +115,7 @@ public class UIControllerInGame : MonoBehaviour
                 PlayerPrefs.SetInt("Highscore3", playerController.score);
             }
             highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
+            deathHighScore.text = "Highscore: " + PlayerPrefs.GetInt("Highscore3").ToString();
         }
     }
 }

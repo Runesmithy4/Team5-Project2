@@ -672,6 +672,8 @@ MonoBehaviour:
   - {fileID: 1143608800}
   scoreText: {fileID: 1988637071}
   highScoreText: {fileID: 206937624}
+  deathHighScore: {fileID: 1206856968}
+  deathScoreText: {fileID: 834422617}
   highScore: 0
 --- !u!4 &210092642
 Transform:
@@ -1616,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 10.752, y: -27.016}
+  m_SizeDelta: {x: 221.5041, y: 34.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &834422616
 CanvasRenderer:
@@ -2345,8 +2347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -75}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 10.752, y: -78.36}
+  m_SizeDelta: {x: 221.5, y: 36.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1206856967
 CanvasRenderer:
