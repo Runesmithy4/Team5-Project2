@@ -35,6 +35,12 @@ public class UIControllerMenu : MonoBehaviour
         setActivePanel(2);
         FindObjectOfType<AudioManager>().Play("Click");
     }
+    public void OnSecondCreditsButtonClick()
+    {
+        setActivePanel(4);
+        FindObjectOfType<AudioManager>().Play("Click");
+    }
+
     public void OnBackButtonClick()
     {
         setActivePanel(0);
